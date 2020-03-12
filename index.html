@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <title>Обухов. Volvo</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-grid-validation-modal-tabs-print.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/datepicker.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<header>
+    <div class="header-top">
+        <div class="container header-top-container">
+            <a href="index.html" class="logo header-logo">
+                <img src="./img/logo.png" alt="" class="logo-img header-logo-img">
+            </a>
+            <div class="header-contacts">
+                <p class="header-tel"><a href="tel:84994551162" class="header-tel-link">8 (499) 455 11 62</a></p>
+                <div class="header-btns">
+                    <a href="" class="header-popup-btn header-request-btn" data-href="#service-popup" data-toggle="modal"
+                       data-target="#service-popup">Записаться на сервис</a>
+                    <a href="" class="header-popup-btn header-service-btn" data-href="#request-popup" data-toggle="modal"
+                       data-target="#request-popup">Отправить заявку</a>
+                </div>
+            </div>
+            <p class="header-address">108811, г.&nbsp;Москва, пос.&nbsp;Московский, дер.&nbsp;Картмазово, 24&nbsp;км Киевского&nbsp;шоссе, владение&nbsp;1
+                (4&nbsp;км от&nbsp;МКАД).</p>
+        </div>
+    </div>
+    <nav id="js-menu-wrapper" class="header-menu-wrapper">
+        <div class="container header-menu-container">
+            <button id="js-menu-btn" class="header-menu-btn" type="button">
+                <span class="header-menu-btn-item header-menu-btn-item-1"></span>
+                <span class="header-menu-btn-item header-menu-btn-item-2"></span>
+                <span class="header-menu-btn-item header-menu-btn-item-3"></span>
+            </button>
+            <ul id="js-menu" class="header-menu">
+                <li class="header-menu-item active">
+                    <a href="index.html" class="header-menu-link">Главная</a>
+                </li>
+                <li class="header-menu-item header-menu-item-with-submenu">
+                    <span class="header-menu-link">О нас</span>
+                    <button class="header-submenu-btn js-submenu-btn" type="button"></button>
+                    <ul class="header-submenu js-submenu">
+                        <li class="header-submenu-item">
+                            <a href="about-company.html" class="header-submenu-link">О компании</a>
+                        </li>
+                        <li class="header-submenu-item">
+                            <a href="vacancies.html" class="header-submenu-link">Вакансии</a>
+                        </li>
+                        <li class="header-submenu-item">
+                            <a href="contacts.html" class="header-submenu-link">Контакты</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header-menu-item header-menu-item-with-submenu">
+                    <span class="header-menu-link">Автомобили</span>
+                    <button class="header-submenu-btn js-submenu-btn" type="button"></button>
+                    <ul class="header-submenu js-submenu">
+                        <li class="header-submenu-item">
+                            <a href="" class="header-submenu-link">Покупка нового авто</a>
+                        </li>
+                        <li class="header-submenu-item">
+                            <a href="catalog.html" class="header-submenu-link">Авто с пробегом</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header-menu-item header-menu-item-with-submenu">
+                    <span class="header-menu-link">Сервис</span>
+                    <button class="header-submenu-btn js-submenu-btn" type="button"></button>
+                    <ul class="header-submenu js-submenu">
+                        <li class="header-submenu-item">
+                            <a href="service-page.html" class="header-submenu-link">Слесарный ремонт</a>
+                        </li>
+                        <li class="header-submenu-item">
+                            <a href="service-page.html" class="header-submenu-link">Кузовной ремонт</a>
+                        </li>
+                        <li class="header-submenu-item">
+                            <a href="service-page.html" class="header-submenu-link">Аксессуары</a>
+                        </li>
+                        <li class="header-submenu-item">
+                            <a href="service-page.html" class="header-submenu-link">ТО</a>
+                        </li>
+                        <li class="header-submenu-item">
+                            <a href="service-page.html" class="header-submenu-link">Запись на сервис</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header-menu-item header-menu-item-with-submenu">
+                    <span class="header-menu-link">Покупателям</span>
+                    <button class="header-submenu-btn js-submenu-btn" type="button"></button>
+                    <ul class="header-submenu js-submenu">
+                        <li class="header-submenu-item">
+                            <a href="service-page-2.html" class="header-submenu-link">Страхование</a>
+                        </li>
+                        <li class="header-submenu-item">
+                            <a href="service-page-2.html" class="header-submenu-link">Кредитование</a>
+                        </li>
+                        <li class="header-submenu-item">
+                            <a href="service-page-2.html" class="header-submenu-link">Корпоративным клиентам</a>
+                        </li>
+                        <li class="header-submenu-item">
+                            <a href="special-offers.html" class="header-submenu-link">Спецпредложения</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header-menu-item">
+                    <a href="news.html" class="header-menu-link">Новости</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div class="content-wrapper">
+    <section class="welcome">
+        <div id="js-welcome-slider" class="welcome-slider swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide welcome-slide swiper-lazy" data-background="img/bg-welcome.jpg">
+                    <div class="container welcome-container">
+                        <div class="welcome-content">
+                            <p class="welcome-text">ИННОВАЦИИ В ЧИСТОМ ВИДЕ</p>
+                            <h1 class="welcome-title">VOLVO V60</h1>
+                            <p class="welcome-text">Получите современный Volvo по специальной цене нашего</p>
+                            <a href="" class="btn btn-border btn-border-light welcome-btn">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide welcome-slide swiper-lazy" data-background="img/bg-welcome.jpg">
+                    <div class="container welcome-container">
+                        <div class="welcome-content">
+                            <p class="welcome-text">ИННОВАЦИИ В ЧИСТОМ ВИДЕ</p>
+                            <h1 class="welcome-title">VOLVO V60</h1>
+                            <p class="welcome-text">Получите современный Volvo по специальной цене нашего</p>
+                            <a href="" class="btn btn-border btn-border-light welcome-btn">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide welcome-slide swiper-lazy" data-background="img/bg-welcome.jpg">
+                    <div class="container welcome-container">
+                        <div class="welcome-content">
+                            <p class="welcome-text">ИННОВАЦИИ В ЧИСТОМ ВИДЕ</p>
+                            <h1 class="welcome-title">VOLVO V60</h1>
+                            <p class="welcome-text">Получите современный Volvo по специальной цене нашего</p>
+                            <a href="" class="btn btn-border btn-border-light welcome-btn">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="swiper-pagination welcome-slider-pagination"></ul>
+    </section>
+    <div class="section">
+        <section id="cars" class="section-home">
+            <div class="container">
+                <h2 class="section-title">Автомобили</h2>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-4 car-card-wrapper">
+                        <div class="car-card">
+                            <a href="new-car-page.html" class="car-card-top">
+                                <p class="car-card-type">Седаны</p>
+                                <h3 class="car-card-model">S90</h3>
+                                <div class="car-card-img-wrapper">
+                                    <img src="img/img-car-card.jpg" alt="">
+                                </div>
+                                <p class="car-card-price">Цена: от <strong>3 055 000 руб.</strong></p>
+                            </a>
+                            <div class="car-card-btns-bar">
+                                <a href="new-car-page.html" class="btn btn-border">В наличии</a>
+                                <a href="new-car-page.html#car-prices" class="more-link">Комплектация и&nbsp;цены</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 car-card-wrapper">
+                        <div class="car-card">
+                            <a href="new-car-page.html" class="car-card-top">
+                                <p class="car-card-type">Седаны</p>
+                                <h3 class="car-card-model">S90</h3>
+                                <div class="car-card-img-wrapper">
+                                    <img src="img/img-car-card.jpg" alt="">
+                                </div>
+                                <p class="car-card-price">Цена: от <strong>3 055 000 руб.</strong></p>
+                            </a>
+                            <div class="car-card-btns-bar">
+                                <a href="new-car-page.html" class="btn btn-border">В наличии</a>
+                                <a href="new-car-page.html#car-prices" class="more-link">Комплектация и&nbsp;цены</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 car-card-wrapper">
+                        <div class="car-card">
+                            <a href="new-car-page.html" class="car-card-top">
+                                <p class="car-card-type">Седаны</p>
+                                <h3 class="car-card-model">S90</h3>
+                                <div class="car-card-img-wrapper">
+                                    <img src="img/img-car-card.jpg" alt="">
+                                </div>
+                                <p class="car-card-price">Цена: от <strong>3 055 000 руб.</strong></p>
+                            </a>
+                            <div class="car-card-btns-bar">
+                                <a href="new-car-page.html" class="btn btn-border">В наличии</a>
+                                <a href="new-car-page.html#car-prices" class="more-link">Комплектация и&nbsp;цены</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 car-card-wrapper">
+                        <div class="car-card">
+                            <a href="new-car-page.html" class="car-card-top">
+                                <p class="car-card-type">Седаны</p>
+                                <h3 class="car-card-model">S90</h3>
+                                <div class="car-card-img-wrapper">
+                                    <img src="img/img-car-card.jpg" alt="">
+                                </div>
+                                <p class="car-card-price">Цена: от <strong>3 055 000 руб.</strong></p>
+                            </a>
+                            <div class="car-card-btns-bar">
+                                <a href="new-car-page.html" class="btn btn-border">В наличии</a>
+                                <a href="new-car-page.html#car-prices" class="more-link">Комплектация и&nbsp;цены</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 car-card-wrapper">
+                        <div class="car-card">
+                            <a href="new-car-page.html" class="car-card-top">
+                                <p class="car-card-type">Седаны</p>
+                                <h3 class="car-card-model">S90</h3>
+                                <div class="car-card-img-wrapper">
+                                    <img src="img/img-car-card.jpg" alt="">
+                                </div>
+                                <p class="car-card-price">Цена: от <strong>3 055 000 руб.</strong></p>
+                            </a>
+                            <div class="car-card-btns-bar">
+                                <a href="new-car-page.html" class="btn btn-border">В наличии</a>
+                                <a href="new-car-page.html#car-prices" class="more-link">Комплектация и&nbsp;цены</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 car-card-wrapper">
+                        <div class="car-card">
+                            <a href="new-car-page.html" class="car-card-top">
+                                <p class="car-card-type">Седаны</p>
+                                <h3 class="car-card-model">S90</h3>
+                                <div class="car-card-img-wrapper">
+                                    <img src="img/img-car-card.jpg" alt="">
+                                </div>
+                                <p class="car-card-price">Цена: от <strong>3 055 000 руб.</strong></p>
+                            </a>
+                            <div class="car-card-btns-bar">
+                                <a href="new-car-page.html" class="btn btn-border">В наличии</a>
+                                <a href="new-car-page.html#car-prices" class="more-link">Комплектация и&nbsp;цены</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-home pt-sm">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">Спецпредложения</h2>
+                    <a href="news.html" class="more-link">Все предложения</a>
+                </div>
+                <div class="offers-slider-wrapper">
+                    <div class="js-offers-slider offers-slider swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="offers-slide swiper-slide">
+                                <a href="text-page.html" class="offer-card-sm">
+                                    <div class="offer-card-sm-img-wrapper swiper-lazy" data-background="img/img-special-offer-1.jpg"></div>
+                                    <p class="offer-card-sm-title">XC90. Инновации в чистом виде.</p>
+                                </a>
+                            </div>
+                            <div class="offers-slide swiper-slide">
+                                <a href="text-page.html" class="offer-card-sm">
+                                    <div class="offer-card-sm-img-wrapper swiper-lazy" data-background="img/img-special-offer-2.jpg"></div>
+                                    <p class="offer-card-sm-title">Инновации в чистом виде. Специальная серия Volvo XC60 2 900</p>
+                                </a>
+                            </div>
+                            <div class="offers-slide swiper-slide">
+                                <a href="text-page.html" class="offer-card-sm">
+                                    <div class="offer-card-sm-img-wrapper swiper-lazy" data-background="img/img-special-offer-3.jpg"></div>
+                                    <p class="offer-card-sm-title">Intellisafe Support Upgrade</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button swiper-button-next offers-swiper-button-next"></div>
+                    <div class="swiper-button swiper-button-prev offers-swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="advantages">
+        <div class="container advantages-container">
+            <div class="advantage">
+                <p class="advantage-number">28 <span>лет</span></p>
+                <p class="advantage-title">на автомобильном рынке</p>
+            </div>
+            <div class="advantage">
+                <p class="advantage-number">30 000</p>
+                <p class="advantage-title">проданых автомобилей Volvo</p>
+            </div>
+            <div class="advantage">
+                <p class="advantage-number">75 %</p>
+                <p class="advantage-title">владельцев автомобилей<br>обслуживаются в Москве</p>
+            </div>
+            <div class="advantage">
+                <p class="advantage-number">65 000</p>
+                <p class="advantage-title">довольных клиентов</p>
+            </div>
+        </div>
+    </section>
+    <div class="section">
+        <section class="section-home">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">Новости</h2>
+                    <a href="news.html" class="more-link">Все новости</a>
+                </div>
+                <div class="articles">
+                    <div class="article-card-wrapper article-card-wrapper-home">
+                        <a href="text-page.html" class="article-card">
+                            <div class="article-card-img-wrapper" style="background-image: url('img/img-article-card.jpg')"></div>
+                            <div class="article-card-content">
+                                <h3 class="article-card-title">Название статьи</h3>
+                                <p class="article-card-date">20.02.2020</p>
+                                <p class="article-card-text">Идейные соображения высшего порядка, а также постоянный количественный рост и сфера
+                                    нашей активности требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям.
+                                    Идейные соображения высшего порядка, а также постоянный количественный рост и сфера
+                                    нашей активности требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="article-card-wrapper article-card-wrapper-home">
+                        <a href="text-page.html" class="article-card">
+                            <div class="article-card-img-wrapper" style="background-image: url('img/img-article-card.jpg')"></div>
+                            <div class="article-card-content">
+                                <h3 class="article-card-title">Название статьи</h3>
+                                <p class="article-card-date">20.02.2020</p>
+                                <p class="article-card-text">Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей
+                                    активности требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="article-card-wrapper article-card-wrapper-home">
+                        <a href="text-page.html" class="article-card">
+                            <div class="article-card-img-wrapper" style="background-image: url('img/img-article-card.jpg')"></div>
+                            <div class="article-card-content">
+                                <h3 class="article-card-title">Название статьи</h3>
+                                <p class="article-card-date">20.02.2020</p>
+                                <p class="article-card-text">Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей
+                                    активности требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-home home-about pt-sm">
+            <div class="container">
+                <h2 class="section-title">О компании</h2>
+                <div class="row">
+                    <div class="order-lg-2 col-lg-6 col-xl-5">
+                        <img src="img/img-home-about.jpg" alt="" class="home-about-img">
+                    </div>
+                    <div class="order-lg-1 col-lg-6 col-xl-7 text-section">
+                        <p class="text-accent">Автомобили Volvo от официального дилера Volvo Car Обухов</p>
+                        <p>Группа компаний ОБУХОВ является официальным дилером Вольво в РФ. Она включает в себя 2 дилерских центра. Volvo Car Обухов
+                            находится в Москве. Другое наше представительство, ОБУХОВ Урал, – это официальный дилер в Перми. У нас можно не только
+                            приобрести Volvo по ценам, рекомендованным производителем, но и получить весь спектр сервисно-ремонтных услуг для
+                            автомобилей данной марки.</p>
+                        <p>Официальным дилером Volvo мы стали в 2000 году. У нас представлен весь модельный ряд Volvo. Вы можете подобрать машину
+                            своей мечты: седан S90 бизнес-класса, комфортабельную S60, кроссоверы ХС60 NEW, ХС90, универсал V90 Cross Country. Также
+                            мы осуществляем продажу запчастей, аксессуаров, дополнительного оборудования. Кроме того, наш официальный дилерский центр
+                            Вольво предлагает услуги по кредиту, аренде, лизингу и страхованию автомобилей. В техническом центре Volvo Car Обухов мы
+                            всегда рады обслужить ваш Volvo, проконсультировать по вопросам тюнинга и ремонта машин.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <ul class="footer-menu">
+            <li class="footer-menu-item">
+                <a href="index.html" class="footer-menu-link">Главная</a>
+            </li>
+            <li class="footer-menu-item footer-menu-item-with-submenu">
+                <span class="footer-menu-link">О нас</span>
+                <ul class="footer-submenu">
+                    <li class="footer-submenu-item">
+                        <a href="about-company.html" class="footer-submenu-link">О компании</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="vacancies.html" class="footer-submenu-link">Вакансии</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="contacts.html" class="footer-submenu-link">Контакты</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="footer-menu-item footer-menu-item-with-submenu">
+                <span class="footer-menu-link">Автомобили</span>
+                <ul class="footer-submenu">
+                    <li class="footer-submenu-item">
+                        <a href="" class="footer-submenu-link">Покупка нового авто</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="new-car-page.html" class="footer-submenu-link">Страница нового авто</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="catalog.html" class="footer-submenu-link">Авто с пробегом</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="car-page.html" class="footer-submenu-link">Страница автомобиля с пробегом</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="footer-menu-item footer-menu-item-with-submenu">
+                <span class="footer-menu-link">Сервис</span>
+                <ul class="footer-submenu">
+                    <li class="footer-submenu-item">
+                        <a href="service-page.html" class="footer-submenu-link">Слесарный ремонт</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="service-page.html" class="footer-submenu-link">Кузовной ремонт</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="service-page.html" class="footer-submenu-link">Аксессуары</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="service-page.html" class="footer-submenu-link">ТО</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="service-page.html" class="footer-submenu-link">Запись на сервис</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="footer-menu-item footer-menu-item-with-submenu">
+                <span class="footer-menu-link">Покупателям</span>
+                <ul class="footer-submenu">
+                    <li class="footer-submenu-item">
+                        <a href="service-page-2.html" class="footer-submenu-link">Страхование</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="service-page-2.html" class="footer-submenu-link">Кредитование</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="service-page-2.html" class="footer-submenu-link">Корпоративным клиентам</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="special-offers.html" class="footer-submenu-link">Спецпредложения</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="footer-menu-item footer-menu-item-with-submenu">
+                <a href="news.html" class="footer-menu-link">Новости</a>
+                <ul class="footer-submenu">
+                    <li class="footer-submenu-item">
+                        <a href="text-page.html" class="footer-submenu-link">Страница статьи</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p class="footer-tel"><a href="tel:84994551162">8 (499) 455 1162</a></p>
+        <p class="footer-address">108811, г. Москва, пос. Московский, дер. Картмазово, 24 км Киевского шоссе, владение 1 (4 км от МКАД).</p>
+        <a href="index.html" class="footer-logo">
+            <img class="footer-logo-img" src="img/logo.png" alt="">
+        </a>
+    </div>
+</footer>
+
+<div id="request-popup" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"></button>
+            <h3 class="modal-title section-title">Обратный звонок</h3>
+            <form id="request-modal-form">
+                <div class="form-group">
+                    <input id="request-modal-name" name="request-modal-name" type="text" class="form-control" placeholder="Имя*" required>
+                </div>
+                <div class="form-group">
+                    <input id="request-modal-tel" name="request-modal-tel" type="tel" class="form-control" placeholder="+7 (___) ___ __ __*" required>
+                </div>
+                <p class="form-disclaimer">Нажимая &laquo;Перезвонить&raquo; Вы даете согласие на&nbsp;обработку
+                    персональных данных и&nbsp;соглашаетесь c&nbsp;<a href="text-page.html">пользовательским соглашением и&nbsp;политикой
+                        конфиденциальности</a>.</p>
+                <button class="btn btn-border btn-big" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="service-popup" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog testdrive-modal-dialog" role="document">
+        <div class="modal-content testdrive-modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"></button>
+            <h3 class="modal-title section-title">Записаться на тест драйв</h3>
+            <form id="testdrive-modal-form">
+                <div class="form-group">
+                    <input id="testdrive-modal-name" name="testdrive-modal-name" type="text" class="form-control" placeholder="Имя*" required>
+                </div>
+                <div class="form-group">
+                    <input id="testdrive-modal-tel"
+                           name="testdrive-modal-tel"
+                           type="tel"
+                           class="form-control"
+                           placeholder="+7 (___) ___ __ __*"
+                           required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Выберите дату</label>
+                    <input id="request-date" name="request-date" type="text" class="form-control form-control-date datepicker-here"
+                           placeholder="20.08.2020">
+                </div>
+                <div class="form-group">
+                    <textarea name="testdrive-modal-comment" id="testdrive-modal-comment" placeholder="Комментарий" class="form-control"></textarea>
+                </div>
+                <p class="form-disclaimer">Нажимая &laquo;Перезвонить&raquo; Вы даете согласие на&nbsp;обработку
+                    персональных данных и&nbsp;соглашаетесь c&nbsp;<a href="text-page.html">пользовательским соглашением и&nbsp;политикой
+                        конфиденциальности</a>.</p>
+                <button class="btn btn-border btn-big" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/bootstrap-modal-tabs-collapse-transition.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery.maskedinput.js"></script>
+<script src="js/datepicker.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

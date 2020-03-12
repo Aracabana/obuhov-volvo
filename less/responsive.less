@@ -1,0 +1,857 @@
+@import "variables.less";
+/*==========RESPONSIVE==========*/
+@media (max-width: 1199px) {
+    /*=HEADER=*/
+    .header-top-container {
+        .flex-wrap();
+        position: relative;
+    }
+    .header-address {
+        .order(3);
+        width: 100%;
+        max-width: none;
+        text-align: center;
+    }
+    .header-logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -90px;
+        .order(1);
+        margin-bottom: 15px;
+        &-img {
+            max-width: 180px;
+        }
+    }
+    .header-contacts {
+        .order(2);
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: none;
+    }
+    .header-tel-link {
+        font-size: 20px;
+    }
+    /*=MENU=*/
+    .header-submenu {
+        min-width: 0;
+        &::before {
+            width: 100px;
+        }
+    }
+    /*=HOME=*/
+    /*Welcome*/
+    .welcome {
+        &-content {
+            padding-left: 0;
+            max-width: 250px;
+        }
+    }
+    /*Cars*/
+    .car-card {
+        &-price {
+            strong {
+                font-size: 22px;
+            }
+        }
+    }
+    /*Offers*/
+    .offer-card-sm {
+        &-title {
+            font-size: 16px;
+        }
+    }
+    /*=CATALOG=*/
+    .catalog-car-card {
+        &-price {
+            font-size: 18px;
+        }
+    }
+    .catalog-filter {
+        &-btns-bar {
+            display: block;
+            text-align: center;
+            .btn {
+                width: 100%;
+            }
+        }
+        &-reset-btn {
+            margin-left: 0;
+            margin-top: 15px;
+        }
+    }
+    /*=NEW CAR PAGE=*/
+    .car-img-wrapper {
+        img {
+            margin: 0 auto;
+        }
+    }
+    .new-car-info {
+        padding-top: 55px;
+    }
+    .car-gallery-filter {
+        &::after {
+            width: 336px;
+        }
+    }
+    /*=404=*/
+    .error-info-wrapper {
+        padding-top: 35px;
+    }
+    .error-title {
+        font-size: 254px;
+    }
+    .error-info {
+        &-title {
+            margin-bottom: 40px;
+        }
+        p {
+            font-size: 20px;
+        }
+        p + p {
+            margin-top: 25px;
+        }
+    }
+}
+@media (min-width: 992px) {
+    /*=MENU=*/
+    .header-menu-item-with-submenu {
+        &:hover {
+            > .header-submenu-btn {
+                .rotate(180deg);
+            }
+            .header-submenu {
+                display: block;
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    /*=MENU=*/
+    .header-menu-btn {
+        position: relative;
+        display: block;
+        width: 26px;
+        height: 17px;
+        cursor: pointer;
+        &-item {
+            position: absolute;
+            left: 0;
+            width: 26px;
+            height: 3px;
+            background-color: @accent-color;
+            .transition();
+            &-1 {
+                top: 0;
+                left: 0;
+            }
+            &-2 {
+                top: 7px;
+            }
+            &-3 {
+                top: 14px;
+            }
+        }
+        &.open {
+            .header-menu-btn-item {
+                top: 7px;
+                &-1 {
+                    .rotate(45deg);
+                }
+                &-2 {
+                    .rotate(-45deg);
+                }
+                &-3 {
+                    .rotate(-45deg);
+                }
+            }
+        }
+    }
+    .header-menu-wrapper {
+        position: relative;
+        padding: 15px 0;
+    }
+    .header-menu {
+        overflow-y: auto;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        right: 0;
+        z-index: 100;
+        display: none;
+        border-bottom: 1px solid @border-color;
+        max-height: 600px;
+        background-color: #ffffff;
+        &-item {
+            margin: 0 auto;
+            max-width: 690px;
+            &-with-submenu {
+                .header-menu-link {
+                    padding-right: 35px;
+                }
+                > .header-submenu-btn {
+                    .rotate(0deg);
+                    &.open {
+                        &::after {
+                            .rotate(180deg);
+                        }
+                    }
+                }
+            }
+        }
+        &-link {
+            padding: 10px 0;
+            font-size: 16px;
+        }
+    }
+    .header-submenu {
+        position: static;
+        border: none;
+        padding: 0;
+        &::before {
+            display: none;
+        }
+        &-link {
+            padding: 10px 15px;
+            line-height: 1;
+            white-space: normal;
+        }
+    }
+    .header-submenu-btn {
+        top: 0;
+        right: 0;
+        margin-top: 0;
+        width: 35px;
+        height: 36px;
+        border: none;
+        background-image: none;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            margin-right: -8px;
+            margin-top: -4.5px;
+            width: 16px;
+            height: 9px;
+            background-image: url("../img/sprite.png");
+            background-repeat: no-repeat;
+            background-position: -16px -36px;
+            .transition(transform ease 0.3s);
+        }
+    }
+    /*=CONTENT=*/
+    .text-section {
+        img {
+            height: auto !important;
+            width: auto !important;
+            max-width: 100%;
+        }
+        .img-left {
+            float: none;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .img-right {
+            float: none;
+            display: block;
+            margin: 0 auto 20px;
+        }
+    }
+    /*=HOME=*/
+    /*Advantages*/
+    .advantages {
+        &-container {
+            .flex-wrap();
+        }
+    }
+    .advantage {
+        width: 50%;
+        &:first-child,
+        &:nth-child(2) {
+            margin-bottom: 30px;
+        }
+        &-number {
+            margin-bottom: 8px;
+        }
+    }
+    /*About*/
+    .home-about {
+        &-img {
+            margin: 0 auto 40px;
+        }
+    }
+    /*Articles*/
+    .articles {
+        display: block;
+        padding: 0;
+    }
+    .article-card-wrapper {
+        &-home {
+            padding: 0;
+            width: 100%;
+        }
+    }
+    /*=ABOUT COMPANY=*/
+    .team-card {
+        &-img {
+            margin-bottom: 15px;
+        }
+        &-name {
+            margin-bottom: 5px;
+        }
+    }
+    /*=CATALOG=*/
+    .catalog-filter {
+        &-wrapper {
+            margin-bottom: 55px;
+        }
+        &-btn {
+            position: relative;
+            display: block;
+            margin-bottom: 15px;
+            padding-right: 35px;
+            font-weight: 700;
+            font-size: 18px;
+            &::after {
+                content: '';
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                margin-top: -4px;
+                border: none;
+                width: 13px;
+                height: 8px;
+                background-repeat: no-repeat;
+                background-image: url("../img/sprite.png");
+                background-position: -30px 0;
+            }
+        }
+        &-btns-bar {
+            .flex();
+            .btn {
+                max-width: 280px;
+            }
+        }
+        &-reset-btn {
+            margin-left: 15px;
+            margin-top: 0;
+        }
+    }
+    /*=CAR PAGE=*/
+    .product-slider-small-wrapper {
+        padding-left: 35px;
+        .swiper-button-prev {
+            bottom: auto;
+            top: 50%;
+            left: 0;
+            right: auto;
+            margin-top: -12px;
+            margin-bottom: 0;
+        }
+        .swiper-button-next {
+            margin-top: -12px;
+        }
+    }
+    .car-info {
+        margin-top: 55px;
+    }
+    .car-characteristics {
+        max-width: none;
+    }
+    /*=NEW CAR PAGE=*/
+    .car-gallery-filter {
+        &::after {
+            width: 180px;
+        }
+    }
+    /*=CONTACTS=*/
+    .contacts-img {
+        margin: 0 auto 30px;
+    }
+    /*=FOOTER=*/
+    .footer-menu {
+        display: none;
+    }
+    /*=404=*/
+    .error-title {
+        margin-bottom: 30px;
+        font-size: 320px;
+        text-align: center;
+    }
+    .error-info-wrapper {
+        border-left: none;
+        border-top: 1px solid @border-color;
+        padding-top: 0;
+    }
+    .error-info {
+        padding-top: 40px;
+        padding-left: 0;
+        text-align: center;
+        &-title {
+            margin-bottom: 50px;
+            font-size: 32px;
+            line-height: 1.2;
+            text-align: center;
+        }
+        p {
+            font-size: 20px;
+        }
+        p + p {
+            margin-top: 30px;
+        }
+    }
+    /*=MODALS=*/
+    .modal-content {
+        padding: 40px 32px;
+    }
+}
+@media (max-width: 991px) and (max-height: 900px) {
+    /*=MENU=*/
+    .header-menu {
+        max-height: 570px;
+    }
+}
+@media (max-width: 991px) and (max-height: 780px) {
+    /*=MENU=*/
+    .header-menu {
+        max-height: 480px;
+    }
+}
+@media (max-width: 991px) and (max-height: 680px) {
+    /*=MENU=*/
+    .header-menu {
+        max-height: 380px;
+    }
+}
+@media (max-width: 991px) and (max-height: 590px) {
+    /*=MENU=*/
+    .header-menu {
+        max-height: 270px;
+    }
+}
+@media (max-width: 991px) and (max-height: 480px) {
+    /*=MENU=*/
+    .header-menu {
+        max-height: 190px;
+    }
+}
+@media (max-width: 767px) {
+    /*=HEADER=*/
+    .header-top {
+        &-container {
+            display: block;
+            text-align: center;
+        }
+    }
+    .header-logo {
+        position: static;
+        display: inline-block;
+        margin-left: 0;
+    }
+    .header-menu {
+        &-item {
+            max-width: 510px;
+        }
+    }
+    /*=CONTENT=*/
+    .text-section {
+        div[class*="col-md"] {
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    /*=HOME=*/
+    /*Welcome*/
+    .welcome {
+        &-slide {
+            height: 400px;
+            background-size: cover;
+        }
+        &-title {
+            font-size: 22px;
+        }
+        &-text {
+            font-size: 16px;
+        }
+    }
+    /*Cars*/
+    .car-card {
+        &-type {
+            font-size: 18px;
+        }
+        &-model {
+            font-size: 18px;
+        }
+        &-price {
+            font-size: 18px;
+            strong {
+                font-size: 18px;
+            }
+        }
+        &-btns-bar {
+            display: block;
+            .btn {
+                margin-right: 0;
+                margin-bottom: 15px;
+                width: 100%;
+            }
+            .more-link {
+                display: block;
+                margin: 0 auto;
+                max-width: 170px;
+            }
+        }
+    }
+    /*=SPECIAL OFFERS=*/
+    .offer-card {
+        display: block;
+        margin-bottom: 30px;
+        .border-left-radius(0);
+        .border-top-radius(6px);
+        &-img-wrapper {
+            margin: -4px -4px 0 -4px;
+            width: auto;
+            height: 240px;
+        }
+        &-content {
+            padding: 20px;
+        }
+        &-title {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    }
+    /*=NEW CAR PAGE=*/
+    .new-car-links {
+        display: block;
+        margin-top: 40px;
+        li + li {
+            margin-left: 0;
+            margin-top: 35px;
+        }
+    }
+    .new-car-tabs {
+        .flex-wrap();
+        &-item {
+            padding: 1.5px;
+            width: 50%;
+        }
+    }
+    .car-gallery-filter {
+        &::after {
+            width: 100px;
+        }
+    }
+    /*=CONTACTS=*/
+    .contacts-item {
+        display: block;
+        &-text {
+            margin-bottom: 30px;
+            padding: 0;
+        }
+        &-img {
+            width: auto;
+            max-width: 100%;
+        }
+    }
+    /*=404=*/
+    .error-title {
+        font-size: 228px;
+    }
+    .error-info {
+        &-title {
+            margin-bottom: 30px;
+        }
+        p {
+            font-size: 18px;
+        }
+        p + p {
+            margin-top: 20px;
+        }
+    }
+}
+@media (max-width: 680px) and (max-height: 600px) {
+    .modal-dialog {
+        display: block;
+        margin: 30px auto;
+        padding-top: 0;
+        padding-bottom: 0;
+        height: auto;
+    }
+}
+@media (max-width: 575px) {
+    /*=HEADER=*/
+    .header-menu {
+        padding: 0 15px;
+        &-item {
+            max-width: none;
+        }
+    }
+    /*=TEXT=*/
+    /*titles*/
+    .section-title-wrapper {
+        .space-between();
+        .more-link {
+            padding-left: 0;
+        }
+    }
+    /*=LINKS&FORMS=*/
+    .more-link {
+        padding-right: 20px;
+    }
+    /*forms*/
+    .form {
+        padding: 16px;
+    }
+    /*=CONTENT=*/
+    .text-section {
+        table {
+            th, td {
+                padding: 10px;
+            }
+        }
+    }
+    /*=HOME=*/
+    /*Welcome*/
+    .welcome {
+        .swiper-pagination {
+            bottom: 16px;
+            &-bullet {
+                width: 40px;
+                + .swiper-pagination-bullet {
+                    margin-left: 16px;
+                }
+            }
+        }
+    }
+    /*Offers*/
+    .offers {
+        &-slider-wrapper {
+            padding: 0 16px;
+            .swiper-button {
+                &-next {
+                    right: -9px;
+                }
+                &-prev {
+                    left: -9px;
+                }
+            }
+        }
+    }
+    /*=NEW CAR PAGE=*/
+    .car-color {
+        + .car-color {
+            margin-left: 10px;
+        }
+    }
+    .new-car-characteristics {
+        display: block;
+        padding: 20px 15px;
+        &-in {
+            padding: 0;
+            width: 100%;
+            &:first-child {
+                margin-bottom: 15px;
+                border-right: none;
+            }
+        }
+    }
+    .car-gallery-filter {
+        &::after {
+            width: 60px;
+        }
+    }
+}
+@media (max-width: 520px) {
+    /*=HOME=*/
+    /*Advantages*/
+    .advantages {
+        &-container {
+            display: block;
+        }
+    }
+    .advantage {
+        width: 100%;
+        &:nth-child(3) {
+            margin-bottom: 30px;
+        }
+    }
+    /*=404=*/
+    .error-title {
+        font-size: 200px;
+    }
+    .error-info {
+        &-title {
+            font-size: 28px;
+        }
+    }
+}
+@media (max-width: 480px) {
+    /*=HOME=*/
+    /*Articles*/
+    .article-card {
+        &-content {
+            overflow: hidden;
+            position: relative;
+            .box-sizing();
+            padding: 15px 15px 55px;
+            &::after {
+                left: 15px;
+                bottom: 15px;
+            }
+        }
+    }
+    /*=SPECIAL OFFERS=*/
+    .offer-card {
+        &-content {
+            padding: 15px;
+        }
+        &-title {
+            margin-bottom: 15px;
+        }
+    }
+    /*=NEW CAR PAGE=*/
+    .car-gallery-item {
+        height: 160px;
+    }
+    /*=404=*/
+    .error-title {
+        font-size: 150px;
+    }
+    .error-info {
+        &-title {
+            font-size: 26px;
+        }
+    }
+    /*=MODALS=*/
+    .modal-content {
+        padding-top: 50px;
+    }
+    button.modal-close {
+        top: 15px;
+        right: 15px;
+    }
+    .modal-title {
+        padding-right: 0;
+    }
+    .request-modal-content {
+        .modal-close {
+            top: 15px;
+            right: 15px;
+        }
+    }
+}
+@media (max-width: 400px) {
+    /*=HEADER=*/
+    .header-contacts {
+        display: block;
+    }
+    .header-tel {
+        margin-bottom: 15px;
+    }
+    .header-popup-btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .header-request-btn {
+        max-width: 185px;
+    }
+    .header-service-btn {
+        max-width: 160px;
+    }
+    /*=TEXT=*/
+    /*titles*/
+    .section-title-wrapper {
+        display: block;
+        .section-title {
+            margin-bottom: 20px;
+        }
+    }
+}
+@media (max-width: 360px) {
+    /*=HEADER=*/
+    .header-contacts {
+        display: block;
+    }
+    /*=LINKS&FORMS=*/
+    /***pagination***/
+    .pagination {
+        .page {
+            width: 30px;
+            height: 30px;
+            font-size: 14px;
+            line-height: 28px;
+        }
+    }
+    /*forms*/
+    .form-group-date {
+        display: block;
+        .form-control {
+            margin-right: 0;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &.jq-selectbox {
+                padding: 0;
+            }
+            .jq-selectbox__select {
+                padding: 0 35px 0 20px;
+            }
+        }
+    }
+    /*=HOME=*/
+    /*Advantages*/
+    .advantage {
+        width: 100%;
+    }
+    /*=CATALOG=*/
+    .catalog-filter {
+        &-btns-bar {
+            display: block;
+            text-align: center;
+            .btn {
+                max-width: none;
+            }
+        }
+        &-reset-btn {
+            margin-left: 0;
+            margin-top: 15px;
+        }
+    }
+    /*=CAR PAGE=*/
+    .product-slide-small {
+        height: 100px;
+    }
+    .car-characteristics {
+        padding: 20px;
+    }
+    /*=NEW CAR PAGE=*/
+    .new-car-tabs {
+        display: block;
+        &-item {
+            width: 100%;
+        }
+    }
+    .car-gallery-item {
+        height: 110px;
+    }
+    /*=404=*/
+    .error-title {
+        font-size: 120px;
+    }
+    .error-info {
+        &-title {
+            font-size: 22px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+}
