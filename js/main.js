@@ -44,7 +44,6 @@ $(document).ready(function () {
         }
     });
     
-    
     //welcome-slider
     if ($('*').is('#js-welcome-slider')) {
         let welcomeSwiper = new Swiper('#js-welcome-slider', {
@@ -68,7 +67,7 @@ $(document).ready(function () {
     }
     //special-offers-slider
     if ($('*').is('.js-offers-slider')) {
-        let articlesSwiper = new Swiper('.js-offers-slider', {
+        let offersSwiper = new Swiper('.js-offers-slider', {
             preloadImages: false,
             lazy: true,
             slidesPerView: 1,
@@ -131,27 +130,44 @@ $(document).ready(function () {
             },
         });
     }
-    
-    $(".welcome-slider.swiper-container, .default-slider-wrapper .swiper-container").hover(function(){
-        this.swiper.autoplay.stop();
-    }, function(){
-        this.swiper.autoplay.start();
-    });
+    //car-description-slider
+    if ($('*').is('.js-car-description-slider')) {
+        $(".car-description-slider-wrapper").each(function(index, element){
+            var carDescriptionSwiper = $(this).find('.js-car-description-slider');
+            carDescriptionSwiper.addClass("instance-" + index);
+            $(this).find(".swiper-button-prev").addClass("btn-prev-" + index);
+            $(this).find(".swiper-button-next").addClass("btn-next-" + index);
+            var swiper = new Swiper(".instance-" + index, {
+                preloadImages: false,
+                lazy: true,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                allowTouchMove: true,
+                loop: false,
+                speed: 400,
+                observer: true,
+                observeParents: true,
+                navigation: {
+                    nextEl: '.swiper-button.swiper-button-next.btn-next-' + index,
+                    prevEl: '.swiper-button.swiper-button-prev.btn-prev-' + index
+                },
+                breakpoints: {
+                    768: {
+                        allowTouchMove: true,
+                        slidesPerView: 2,
+                        spaceBetween: 30
+                    },
+                    992: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    }
+                }
+            });
+        });
+    }
     
     //masked input
     $('input[type="tel"]').mask('+7 (999) 999 99 99');
-    
-    //scroll
-    var links = $('.js-link');
-    links.click(function(e) {
-        e.preventDefault();
-        var link = $(this),
-            linkHref = link.attr('href'),
-            top = $(linkHref).offset().top - 80;
-        links.removeClass('active');
-        link.addClass('active');
-        $('body,html').animate({scrollTop: top}, 900);
-    });
     
     //formstyler
     if ($('*').is('select')) {
@@ -243,17 +259,25 @@ $(document).ready(function () {
         });
     }
     
-    //tabs
-    var url = document.location.toString();
-    if (url.match('#car-prices')) {
-        $('.nav-tabs a[href="#car-prices"]').tab('show');
-        var top = $('.nav-tabs a[href="#car-prices"]').offset().top - 120;
-        $('html, body').animate({scrollTop: top}, 300);
-    }
-    
     //car img
     $('.js-car-color').click(function() {
         var carImg = $(this).data('img');
         $('#js-car-img').attr('src', carImg);
     });
+    
+    //to top btn
+    if($('*').is('.js-to-top-btn')) {
+        var toTopBtn = $('.js-to-top-btn');
+        $(window).scroll(function () {
+            if ($(this).scrollTop() >= 350) {
+                toTopBtn.addClass('visible');
+            } else {
+                toTopBtn.removeClass('visible');
+            }
+        });
+        toTopBtn.click(function (e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 400);
+        });
+    }
 });

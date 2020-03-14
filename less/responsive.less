@@ -1,5 +1,18 @@
 @import "variables.less";
 /*==========RESPONSIVE==========*/
+@media (max-width: 1740px) {
+    /*=FOOTER=*/
+    .to-top-btn {
+        right: 30px;
+        bottom: 400px;
+    }
+}
+@media (max-width: 1366px) {
+    /*=FOOTER=*/
+    .to-top-btn {
+        right: 5px;
+    }
+}
 @media (max-width: 1199px) {
     /*=HEADER=*/
     .header-top-container {
@@ -62,11 +75,6 @@
         }
     }
     /*=CATALOG=*/
-    .catalog-car-card {
-        &-price {
-            font-size: 18px;
-        }
-    }
     .catalog-filter {
         &-btns-bar {
             display: block;
@@ -95,6 +103,11 @@
     .car-gallery-filter {
         &::after {
             width: 336px;
+        }
+    }
+    .differences {
+        &-card {
+            .align-items-start();
         }
     }
     /*=404=*/
@@ -289,11 +302,9 @@
         display: block;
         padding: 0;
     }
-    .article-card-wrapper {
-        &-home {
-            padding: 0;
-            width: 100%;
-        }
+    .article-card-wrapper-home {
+        padding: 0;
+        width: 100%;
     }
     /*=ABOUT COMPANY=*/
     .team-card {
@@ -380,11 +391,29 @@
             }
         }
     }
+    .differences {
+        &-card {
+            .align-items-center();
+        }
+    }
+    .car-description {
+        &-slider-wrapper {
+            padding: 0 50px;
+        }
+        .swiper-button {
+            top: 210px;
+            width: 40px;
+            height: 40px;
+        }
+    }
     /*=CONTACTS=*/
     .contacts-img {
         margin: 0 auto 30px;
     }
     /*=FOOTER=*/
+    .to-top-btn {
+        bottom: 225px;
+    }
     .footer-menu {
         display: none;
     }
@@ -554,6 +583,12 @@
             margin-top: 10px;
         }
     }
+    /*=NEW CAR PAGE=*/
+    .differences {
+        &-card {
+            .align-items-start();
+        }
+    }
     /*=404=*/
     .error-title {
         font-size: 228px;
@@ -721,6 +756,9 @@
             }
         }
     }
+    .car-description {
+        margin-top: 20px;
+    }
 }
 @media (max-width: 520px) {
     /*=HOME=*/
@@ -808,6 +846,32 @@
             width: 130px;
         }
     }
+    .differences {
+        &-card {
+            display: block;
+            &-img {
+                margin-bottom: 15px;
+                margin-right: 0;
+                display: block;
+                max-width: 100%;
+            }
+            &-title {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .car-description {
+        &-slider-wrapper {
+            padding: 50px 0 0;
+        }
+        .swiper-button {
+            top: 0;
+        }
+        .swiper-button-prev {
+            left: auto;
+            right: 50px;
+        }
+    }
     /*=404=*/
     .error-title {
         font-size: 150px;
@@ -816,11 +880,6 @@
         &-title {
             font-size: 26px;
         }
-    }
-    /*=MODALS=*/
-    button.modal-close {
-        top: 15px;
-        right: 15px;
     }
 }
 @media (max-width: 400px) {
