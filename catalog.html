@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/bootstrap-grid-validation-modal-tabs-print.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/datepicker.min.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
+    <link rel="stylesheet" href="css/ion.rangeSlider.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -131,7 +133,7 @@
             <h1 class="section-title section-title-decorated">Авто с пробегом</h1>
             
             <div class="row">
-                <div class="col-lg-4 col-xl-3">
+                <div class="col-lg-4">
                     <form id="filter-form" name="filter-form" class="catalog-filter-wrapper">
                         <a href="#filter" class="catalog-filter-btn" role="button" data-toggle="collapse" aria-expanded="false"
                            aria-controls="filter">Фильтр</a>
@@ -142,12 +144,12 @@
                                     <div class="col-6 range-output-wrapper">
                                         <span>от</span>
                                         <input id="min-price" type="text" value="" placeholder="0"
-                                               class="form-control js-range-min" data-min="0">
+                                               class="form-control form-control-sm js-range-min" data-min="0">
                                     </div>
                                     <div class="col-6 range-output-wrapper">
                                         <span>до</span>
                                         <input id="max-price" type="text" value="" placeholder="999 999"
-                                               class="form-control js-range-max" data-max="9999999">
+                                               class="form-control form-control-sm js-range-max" data-max="9999999">
                                     </div>
                                 </div>
                                 <input type="text" id="price" class="js-ion-range-slider form-control-range-slider" data-min="0"
@@ -159,12 +161,12 @@
                                     <div class="col-6 range-output-wrapper">
                                         <span>от</span>
                                         <input id="min-mileage" type="text" value="" placeholder="0"
-                                               class="form-control js-range-min" data-min="0">
+                                               class="form-control form-control-sm js-range-min" data-min="0">
                                     </div>
                                     <div class="col-6 range-output-wrapper">
                                         <span>до</span>
                                         <input id="max-mileage" type="text" value="" placeholder="9 999"
-                                               class="form-control js-range-max" data-max="9999">
+                                               class="form-control form-control-sm js-range-max" data-max="9999">
                                     </div>
                                 </div>
                                 <input type="text" id="mileage" class="js-ion-range-slider form-control-range-slider" data-min="0"
@@ -172,7 +174,7 @@
                             </div>
                             <div class="catalog-filter-item">
                                 <p class="catalog-filter-title">Год выпуска</p>
-                                <select name="year" id="year" class="form-control">
+                                <select name="year" id="year" class="form-control form-control-sm">
                                     <option value="2015">2015</option>
                                     <option value="2016">2016</option>
                                     <option value="2017">2017</option>
@@ -247,41 +249,233 @@
                                 </div>
                             </div>
                             <div class="catalog-filter-btns-bar">
-                                <button class="btn btn-default" type="submit">Показать <span>(234)</span></button>
+                                <button class="btn btn-border btn-big" type="submit">Показать <span>(234)</span></button>
                                 <button id="js-reset" class="catalog-filter-reset-btn" type="reset">Сбросить</button>
                             </div>
                         </div>
                     </form>
                 </div>
-                <div class="col-lg-8 col-xl-9">
+                <div class="col-lg-8">
                     <div class="row">
-                        <div class="col-sm-6 col-xl-4 catalog-car-card-wrapper">
-                            <a href="car-page.html" class="catalog-car-card">
-                                <div class="catalog-car-card-img-wrapper">
-                                    <img src="img/img-car-card.png" alt="" class="catalog-car-card-img">
+                        <div class="col-sm-6 car-card-wrapper">
+                            <a href="car-page.html" class="car-card">
+                                <div class="car-card-top">
+                                    <p class="car-card-type">Седаны</p>
+                                    <h3 class="car-card-model">S90</h3>
+                                    <div class="car-card-img-wrapper">
+                                        <img src="img/img-car-card.jpg" alt="">
+                                    </div>
+                                    <p class="car-card-description">Белый, 1.4 л / 107 л.с., Бензин, Автоматическая</p>
+                                    <p class="car-card-price">Цена: от <strong>3 055 000 руб.</strong></p>
                                 </div>
-                                <div class="catalog-car-card-content">
-                                    <p class="catalog-car-card-title">Emgrand 7</p>
-                                    <p class="catalog-car-card-info">Белый, 1.4 л / 107 л.с., <br>Бензин, Автоматическая</p>
-                                    <p class="catalog-car-card-price">286 000 руб.</p>
+                                <div class="car-card-btns-bar">
+                                    <span class="more-link">Подробнее</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 car-card-wrapper">
+                            <a href="car-page.html" class="car-card">
+                                <div class="car-card-top">
+                                    <p class="car-card-type">Седаны</p>
+                                    <h3 class="car-card-model">S90</h3>
+                                    <div class="car-card-img-wrapper">
+                                        <img src="img/img-car-card.jpg" alt="">
+                                    </div>
+                                    <p class="car-card-description">Белый, 1.4 л / 107 л.с., Бензин, Автоматическая</p>
+                                    <p class="car-card-price">Цена: от <strong>3 055 000 руб.</strong></p>
+                                </div>
+                                <div class="car-card-btns-bar">
+                                    <span class="more-link">Подробнее</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 car-card-wrapper">
+                            <a href="car-page.html" class="car-card">
+                                <div class="car-card-top">
+                                    <p class="car-card-type">Седаны</p>
+                                    <h3 class="car-card-model">S90</h3>
+                                    <div class="car-card-img-wrapper">
+                                        <img src="img/img-car-card.jpg" alt="">
+                                    </div>
+                                    <p class="car-card-description">Белый, 1.4 л / 107 л.с., Бензин, Автоматическая</p>
+                                    <p class="car-card-price">Цена: от <strong>3 055 000 руб.</strong></p>
+                                </div>
+                                <div class="car-card-btns-bar">
+                                    <span class="more-link">Подробнее</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 car-card-wrapper">
+                            <a href="car-page.html" class="car-card">
+                                <div class="car-card-top">
+                                    <p class="car-card-type">Седаны</p>
+                                    <h3 class="car-card-model">S90</h3>
+                                    <div class="car-card-img-wrapper">
+                                        <img src="img/img-car-card.jpg" alt="">
+                                    </div>
+                                    <p class="car-card-description">Белый, 1.4 л / 107 л.с., Бензин, Автоматическая</p>
+                                    <p class="car-card-price">Цена: от <strong>3 055 000 руб.</strong></p>
+                                </div>
+                                <div class="car-card-btns-bar">
+                                    <span class="more-link">Подробнее</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 car-card-wrapper">
+                            <a href="car-page.html" class="car-card">
+                                <div class="car-card-top">
+                                    <p class="car-card-type">Седаны</p>
+                                    <h3 class="car-card-model">S90</h3>
+                                    <div class="car-card-img-wrapper">
+                                        <img src="img/img-car-card.jpg" alt="">
+                                    </div>
+                                    <p class="car-card-description">Белый, 1.4 л / 107 л.с., Бензин, Автоматическая</p>
+                                    <p class="car-card-price">Цена: от <strong>3 055 000 руб.</strong></p>
+                                </div>
+                                <div class="car-card-btns-bar">
+                                    <span class="more-link">Подробнее</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 car-card-wrapper">
+                            <a href="car-page.html" class="car-card">
+                                <div class="car-card-top">
+                                    <p class="car-card-type">Седаны</p>
+                                    <h3 class="car-card-model">S90</h3>
+                                    <div class="car-card-img-wrapper">
+                                        <img src="img/img-car-card.jpg" alt="">
+                                    </div>
+                                    <p class="car-card-description">Белый, 1.4 л / 107 л.с., Бензин, Автоматическая</p>
+                                    <p class="car-card-price">Цена: от <strong>3 055 000 руб.</strong></p>
+                                </div>
+                                <div class="car-card-btns-bar">
+                                    <span class="more-link">Подробнее</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 car-card-wrapper">
+                            <a href="car-page.html" class="car-card">
+                                <div class="car-card-top">
+                                    <p class="car-card-type">Седаны</p>
+                                    <h3 class="car-card-model">S90</h3>
+                                    <div class="car-card-img-wrapper">
+                                        <img src="img/img-car-card.jpg" alt="">
+                                    </div>
+                                    <p class="car-card-description">Белый, 1.4 л / 107 л.с., Бензин, Автоматическая</p>
+                                    <p class="car-card-price">Цена: от <strong>3 055 000 руб.</strong></p>
+                                </div>
+                                <div class="car-card-btns-bar">
+                                    <span class="more-link">Подробнее</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 car-card-wrapper">
+                            <a href="car-page.html" class="car-card">
+                                <div class="car-card-top">
+                                    <p class="car-card-type">Седаны</p>
+                                    <h3 class="car-card-model">S90</h3>
+                                    <div class="car-card-img-wrapper">
+                                        <img src="img/img-car-card.jpg" alt="">
+                                    </div>
+                                    <p class="car-card-description">Белый, 1.4 л / 107 л.с., Бензин, Автоматическая</p>
+                                    <p class="car-card-price">Цена: от <strong>3 055 000 руб.</strong></p>
+                                </div>
+                                <div class="car-card-btns-bar">
+                                    <span class="more-link">Подробнее</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 car-card-wrapper">
+                            <a href="car-page.html" class="car-card">
+                                <div class="car-card-top">
+                                    <p class="car-card-type">Седаны</p>
+                                    <h3 class="car-card-model">S90</h3>
+                                    <div class="car-card-img-wrapper">
+                                        <img src="img/img-car-card.jpg" alt="">
+                                    </div>
+                                    <p class="car-card-description">Белый, 1.4 л / 107 л.с., Бензин, Автоматическая</p>
+                                    <p class="car-card-price">Цена: от <strong>3 055 000 руб.</strong></p>
+                                </div>
+                                <div class="car-card-btns-bar">
+                                    <span class="more-link">Подробнее</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 car-card-wrapper">
+                            <a href="car-page.html" class="car-card">
+                                <div class="car-card-top">
+                                    <p class="car-card-type">Седаны</p>
+                                    <h3 class="car-card-model">S90</h3>
+                                    <div class="car-card-img-wrapper">
+                                        <img src="img/img-car-card.jpg" alt="">
+                                    </div>
+                                    <p class="car-card-description">Белый, 1.4 л / 107 л.с., Бензин, Автоматическая</p>
+                                    <p class="car-card-price">Цена: от <strong>3 055 000 руб.</strong></p>
+                                </div>
+                                <div class="car-card-btns-bar">
+                                    <span class="more-link">Подробнее</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 car-card-wrapper">
+                            <a href="car-page.html" class="car-card">
+                                <div class="car-card-top">
+                                    <p class="car-card-type">Седаны</p>
+                                    <h3 class="car-card-model">S90</h3>
+                                    <div class="car-card-img-wrapper">
+                                        <img src="img/img-car-card.jpg" alt="">
+                                    </div>
+                                    <p class="car-card-description">Белый, 1.4 л / 107 л.с., Бензин, Автоматическая</p>
+                                    <p class="car-card-price">Цена: от <strong>3 055 000 руб.</strong></p>
+                                </div>
+                                <div class="car-card-btns-bar">
+                                    <span class="more-link">Подробнее</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6 car-card-wrapper">
+                            <a href="car-page.html" class="car-card">
+                                <div class="car-card-top">
+                                    <p class="car-card-type">Седаны</p>
+                                    <h3 class="car-card-model">S90</h3>
+                                    <div class="car-card-img-wrapper">
+                                        <img src="img/img-car-card.jpg" alt="">
+                                    </div>
+                                    <p class="car-card-description">Белый, 1.4 л / 107 л.с., Бензин, Автоматическая</p>
+                                    <p class="car-card-price">Цена: от <strong>3 055 000 руб.</strong></p>
+                                </div>
+                                <div class="car-card-btns-bar">
+                                    <span class="more-link">Подробнее</span>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <div class="pagination">
+                    <div class="pagination pagination-right">
                         <a href="" class="page">1</a>
                         <a href="" class="page active">2</a>
                         <span class="page">...</span>
                         <a href="" class="page">12</a>
                         <a href="" class="page page-next"></a>
                     </div>
-                    <div class="text-section pt">
-                        <h2 class="section-title section-title-dark">Заголовок</h2>
-                        <p>Значимость этих проблем настолько очевидна, что сложившаяся структура организации в значительной степени обуславливает создание соответствующий условий активизации. Таким образом постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что сложившаяся структура организации в значительной степени обуславливает создание соответствующий условий активизации. Таким образом постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.</p>
-                        <p>Значимость этих проблем настолько очевидна, что сложившаяся структура организации в значительной степени обуславливает создание соответствующий условий активизации. Таким образом постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что сложившаяся структура организации в значительной степени обуславливает создание соответствующий условий активизации. Таким образом постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.</p>
-                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+    
+    <section class="text-section section section-pt-none">
+        <div class="container">
+            <h3>Автомобили Volvo от официального дилера Volvo Car Обухов</h3>
+            <p>Официальный дилер Volvo Car Обухов предлагает приобрести подержанные автомобили Вольво. Перейдя по ссылке или нажав на фото понравившейся вам модели Volvo, вы можете ознакомиться с более подробными техническими характеристиками, описанием экстерьера и интерьера выбранного Volvo, а также с перечнем предлагаемых аксессуаров.</p>
+            <h3>Предпродажная подготовка</h3>
+            <p>Для обеспечения соответствия внешнего вида и характеристик подержанных Вольво требованиям завода-изготовителя мы проводим предпродажную подготовку автомобилей. Подержанные автомобили обслуживаются в каждом из наших сервисных центров. В комплекс услуг могут входить следующие мероприятия:</p>
+            <ul>
+                <li>восстановление лакокрасочного покрытия кузова;</li>
+                <li>химическая чистка салона Вольво;</li>
+                <li>подтягивание креплений узлов и деталей;</li>
+                <li>устранение неисправностей электроники;</li>
+                <li>замена изношенных деталей на новые.</li>
+            </ul>
+            <p>Чтобы получить дополнительную информацию об условиях, на которых можно приобрести подержанные автомобили Вольво или заказать предпродажную подготовку, обращайтесь к менеджерам Volvo Car Обухов по телефонам, указанным в разделе «Контакты».</p>
         </div>
     </section>
 </div>
@@ -415,7 +609,7 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">Выберите дату</label>
-                    <input id="request-date" name="request-date" type="text" class="form-control form-control-date datepicker-here"
+                    <input id="testdrive-date" name="testdrive-date" type="text" class="form-control form-control-date datepicker-here"
                            placeholder="20.08.2020">
                 </div>
                 <div class="form-group">
@@ -435,6 +629,8 @@
 <script src="js/swiper.min.js"></script>
 <script src="js/jquery.maskedinput.js"></script>
 <script src="js/datepicker.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+<script src="js/ion.rangeSlider.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

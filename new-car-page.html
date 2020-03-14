@@ -8,9 +8,11 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
     <meta http-equiv="x-rim-auto-match" content="none">
-    <title>Обухов</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+    <title>Обухов. Volvo</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap-grid-validation-modal-tabs-print.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/datepicker.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -18,55 +20,58 @@
 <body>
 <header>
     <div class="header-top">
-        <div class="container">
-            <a href="" class="header-top-link" data-href="#testdrive-popup" data-toggle="modal"
-               data-target="#testdrive-popup">Пройти тест-драйв</a>
-            <a href="" class="header-top-link" data-href="#to-popup" data-toggle="modal"
-               data-target="#to-popup">Запись на ТО</a>
-            <a href="" class="header-top-link">Авто в наличии</a>
-            <a href="contacts.html" class="header-top-link">Контакты</a>
+        <div class="container header-top-container">
+            <a href="index.html" class="logo header-logo">
+                <img src="./img/logo.png" alt="" class="logo-img header-logo-img">
+            </a>
+            <div class="header-contacts">
+                <p class="header-tel"><a href="tel:84994551162" class="header-tel-link">8 (499) 455 11 62</a></p>
+                <div class="header-btns">
+                    <a href="" class="header-popup-btn header-request-btn" data-href="#service-popup" data-toggle="modal"
+                       data-target="#service-popup">Записаться на сервис</a>
+                    <a href="" class="header-popup-btn header-service-btn" data-href="#request-popup" data-toggle="modal"
+                       data-target="#request-popup">Отправить заявку</a>
+                </div>
+            </div>
+            <p class="header-address">108811, г.&nbsp;Москва, пос.&nbsp;Московский, дер.&nbsp;Картмазово, 24&nbsp;км Киевского&nbsp;шоссе, владение&nbsp;1
+                (4&nbsp;км от&nbsp;МКАД).</p>
         </div>
     </div>
-    <div class="header-middle">
-        <div class="container header-middle-container">
-            <a href="index.html" class="logo header-logo">
-                <img src="./img/logo-big.png" alt="" class="logo-img header-logo-img">
-            </a>
-            <a href="tel:+74957265144" class="header-tel">+7 (495) 726 51 44</a>
-            <a href="tel:84994900984" class="header-tel">8 (499) 490 09 84</a>
-            <a href="" class="btn btn-border header-request-btn" data-href="#request-popup" data-toggle="modal"
-               data-target="#request-popup">Отправить заявку</a>
+    <nav id="js-menu-wrapper" class="header-menu-wrapper">
+        <div class="container header-menu-container">
             <button id="js-menu-btn" class="header-menu-btn" type="button">
                 <span class="header-menu-btn-item header-menu-btn-item-1"></span>
                 <span class="header-menu-btn-item header-menu-btn-item-2"></span>
                 <span class="header-menu-btn-item header-menu-btn-item-3"></span>
             </button>
-        </div>
-    </div>
-    <nav id="js-menu-wrapper" class="header-menu-wrapper">
-        <div class="container header-menu-container">
             <ul id="js-menu" class="header-menu">
-                <li class="header-menu-item header-menu-item-with-submenu active">
-                    <span class="header-menu-link">Автомобили</span>
+                <li class="header-menu-item active">
+                    <a href="index.html" class="header-menu-link">Главная</a>
+                </li>
+                <li class="header-menu-item header-menu-item-with-submenu">
+                    <span class="header-menu-link">О нас</span>
                     <button class="header-submenu-btn js-submenu-btn" type="button"></button>
                     <ul class="header-submenu js-submenu">
-                        <li class="header-submenu-item header-submenu-item-with-submenu">
-                            <a href="index.html#cars" class="header-submenu-link">Покупка нового авто</a>
+                        <li class="header-submenu-item">
+                            <a href="about-company.html" class="header-submenu-link">О компании</a>
                         </li>
-                        <li class="header-submenu-item header-submenu-item-with-submenu">
-                            <a href="catalog.html" class="header-submenu-link">Авто с пробегом</a>
+                        <li class="header-submenu-item">
+                            <a href="vacancies.html" class="header-submenu-link">Вакансии</a>
+                        </li>
+                        <li class="header-submenu-item">
+                            <a href="contacts.html" class="header-submenu-link">Контакты</a>
                         </li>
                     </ul>
                 </li>
                 <li class="header-menu-item header-menu-item-with-submenu">
-                    <span class="header-menu-link">Услуги</span>
+                    <span class="header-menu-link">Автомобили</span>
                     <button class="header-submenu-btn js-submenu-btn" type="button"></button>
                     <ul class="header-submenu js-submenu">
-                        <li class="header-submenu-item header-submenu-item-with-submenu">
-                            <a href="service-page-2.html" class="header-submenu-link">Кредитование</a>
+                        <li class="header-submenu-item">
+                            <a href="" class="header-submenu-link">Покупка нового авто</a>
                         </li>
-                        <li class="header-submenu-item header-submenu-item-with-submenu">
-                            <a href="service-page-2.html" class="header-submenu-link">Страхование</a>
+                        <li class="header-submenu-item">
+                            <a href="catalog.html" class="header-submenu-link">Авто с пробегом</a>
                         </li>
                     </ul>
                 </li>
@@ -74,28 +79,40 @@
                     <span class="header-menu-link">Сервис</span>
                     <button class="header-submenu-btn js-submenu-btn" type="button"></button>
                     <ul class="header-submenu js-submenu">
-                        <li class="header-submenu-item header-submenu-item-with-submenu">
+                        <li class="header-submenu-item">
                             <a href="service-page.html" class="header-submenu-link">Слесарный ремонт</a>
                         </li>
-                        <li class="header-submenu-item header-submenu-item-with-submenu">
+                        <li class="header-submenu-item">
                             <a href="service-page.html" class="header-submenu-link">Кузовной ремонт</a>
                         </li>
-                        <li class="header-submenu-item header-submenu-item-with-submenu">
-                            <a href="service-page.html" class="header-submenu-link">Запчасти</a>
+                        <li class="header-submenu-item">
+                            <a href="service-page.html" class="header-submenu-link">Аксессуары</a>
                         </li>
-                        <li class="header-submenu-item header-submenu-item-with-submenu">
-                            <a href="service-page.html" class="header-submenu-link">Запчасти на сервис</a>
+                        <li class="header-submenu-item">
+                            <a href="service-page.html" class="header-submenu-link">ТО</a>
+                        </li>
+                        <li class="header-submenu-item">
+                            <a href="service-page.html" class="header-submenu-link">Запись на сервис</a>
                         </li>
                     </ul>
                 </li>
-                <li class="header-menu-item">
-                    <a href="service-page-2.html" class="header-menu-link">Корпоративным клиентам</a>
-                </li>
-                <li class="header-menu-item">
-                    <a href="special-offers.html" class="header-menu-link">Спецпредложения</a>
-                </li>
-                <li class="header-menu-item">
-                    <a href="about-company.html" class="header-menu-link">О компании</a>
+                <li class="header-menu-item header-menu-item-with-submenu">
+                    <span class="header-menu-link">Покупателям</span>
+                    <button class="header-submenu-btn js-submenu-btn" type="button"></button>
+                    <ul class="header-submenu js-submenu">
+                        <li class="header-submenu-item">
+                            <a href="service-page-2.html" class="header-submenu-link">Страхование</a>
+                        </li>
+                        <li class="header-submenu-item">
+                            <a href="service-page-2.html" class="header-submenu-link">Кредитование</a>
+                        </li>
+                        <li class="header-submenu-item">
+                            <a href="service-page-2.html" class="header-submenu-link">Корпоративным клиентам</a>
+                        </li>
+                        <li class="header-submenu-item">
+                            <a href="special-offers.html" class="header-submenu-link">Спецпредложения</a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="header-menu-item">
                     <a href="news.html" class="header-menu-link">Новости</a>
@@ -105,21 +122,32 @@
     </nav>
 </header>
 <div class="content-wrapper">
-    <section class="section-inner">
+    <section class="section">
         <div class="container">
             <ul class="breadcrumbs">
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="catalog.html">Авто с пробегом</a></li>
-                <li>Emgrant 7</li>
+                <li>Volvo XC90</li>
             </ul>
-            <h1 class="section-title section-title-decorated">Emgrant 7</h1>
-            <div class="row">
-                <div class="col-xl-7 order-xl-2">
+            <h1 class="section-title">Volvo XC90</h1>
+            <div class="row new-car-wrapper">
+                <div class="col-12 order-1 car-prices">
+                    <p class="car-price">
+                        Цена от <strong>2 999 999 руб.</strong>
+                    </p>
+                    <p class="car-price-credit">
+                        В кредит <strong>99 999 руб.</strong>
+                    </p>
+                </div>
+                <div class="col-xl-8 order-2 order-xl-3">
                     <div class="car-img-wrapper">
                         <form id="car-colors" class="car-colors">
                             <div class="car-color">
-                                <input id="car-color-1" type="radio" name="car-color">
-                                <label for="car-color-1" class="car-color-label js-car-color" style="background-color: #ff0000;" data-img="img/img-product-page.png"></label>
+                                <input id="car-color-1" type="radio" name="car-color" checked>
+                                <label for="car-color-1"
+                                       class="car-color-label js-car-color"
+                                       style="background-color: #ff0000;"
+                                       data-img="img/img-product-page.png"></label>
                             </div>
                             <div class="car-color">
                                 <input id="car-color-2" type="radio" name="car-color">
@@ -137,55 +165,45 @@
                                        data-img="img/img-product-page.png"></label>
                             </div>
                             <div class="car-color">
-                                <input id="car-color-5" type="radio" name="car-color" checked>
+                                <input id="car-color-5" type="radio" name="car-color">
                                 <label for="car-color-5" class="car-color-label js-car-color"
-                                       style="background-color: #ffffff; border-color: #eff3f7;" data-img="img/img-product-page.png"></label>
+                                       style="background-color: #ffffff; border-color: #eaeaea;" data-img="img/img-product-page.png"></label>
                             </div>
                         </form>
-                        <img id="js-car-img" src="img/img-product-page.png" alt="">
+                        <img id="js-car-img" src="img/img-new-car.jpg" alt="">
                     </div>
                 </div>
-                <div class="col-xl-5 new-car-info order-xl-1">
-                    <div class="new-car-prices">
-                        <p class="new-car-prices-item">
-                            <strong>Цена:</strong>
-                            <span>от <span>684 900 руб.</span></span>
-                        </p>
-                        <p class="new-car-prices-item">
-                            <strong>В кредит:</strong>
-                            <span>за <span>3 300 руб.</span> в месяц</span>
-                        </p>
-                    </div>
+                <div class="col-xl-4 new-car-info order-3 order-xl-2">
                     <div class="new-car-characteristics">
-                        <ul class="new-car-characteristics-in">
-                            <li class="new-car-characteristics-item-dimensions">
+                        <ul>
+                            <li>
                                 <strong>Габариты:</strong>
                                 <span>4519 х 1831 х 1694</span>
                             </li>
-                            <li class="new-car-characteristics-item-transmission">
+                            <li>
                                 <strong>Трансмиссия:</strong>
                                 <span>6МТ / 6 АТ</span>
                             </li>
-                            <li class="new-car-characteristics-item-engine">
+                            <li>
                                 <strong>Двигатель:</strong>
                                 <span>2.0 - 139</span>
                                 <span>2.4 - 149</span>
                                 <span>1.8 - 184</span>
                             </li>
-                            <li class="new-car-characteristics-item-warranty">
+                            <li>
                                 <strong>Гарантия:</strong>
                                 <span>5 лет / 150 000 км*</span>
                             </li>
                         </ul>
-                        <ul class="new-car-characteristics-in">
-                            <li class="new-car-characteristics-item-fuel">
+                        <ul>
+                            <li>
                                 <strong>Расход топлива:</strong>
                                 <span>2.0 МТ 2WD - от 8.1</span>
                                 <span>2.0 МТ 2WD - от 8.1</span>
                                 <span>2.0 МТ 2WD - от 8.1</span>
                                 <span>2.0 МТ 2WD - от 8.1</span>
                             </li>
-                            <li class="new-car-characteristics-item-wheels">
+                            <li>
                                 <strong>Привод колёс:</strong>
                                 <span>Передний</span>
                                 <span>Полный</span>
@@ -194,314 +212,259 @@
                     </div>
                 </div>
             </div>
-            <ul class="new-car-links">
-                <li><a href="" class="car-link car-link-testdrive" data-href="#testdrive-popup" data-toggle="modal"
-                       data-target="#testdrive-popup">Запись на тест драйв</a></li>
-                <li><a href="" class="car-link car-link-credit" data-href="#credit-popup" data-toggle="modal"
+            <ul class="car-links">
+                <li><a href="" class="btn btn-border" data-href="#car-request-popup" data-toggle="modal"
+                       data-target="#car-request-popup">Отправить заявку</a></li>
+                <li><a href="" class="btn btn-border" data-href="#credit-popup" data-toggle="modal"
                        data-target="#credit-popup">Купить в кредит</a></li>
-                <li><a href="" class="car-link car-link-tradein" data-href="#tradein-popup" data-toggle="modal"
+                <li><a href="" class="btn btn-border" data-href="#tradein-popup" data-toggle="modal"
                        data-target="#tradein-popup">Trade-in</a></li>
             </ul>
-            <div class="new-caa-tabs-wrapper">
-                <ul class="nav nav-tabs new-car-tabs">
-                    <li class="tabs-item new-car-tabs-item active">
-                        <a href="#car-description" data-toggle="tab">Описание</a>
-                    </li>
-                    <li class="tabs-item new-car-tabs-item">
-                        <a href="#car-prices" data-toggle="tab">Комплектации и цены</a>
-                    </li>
-                    <li class="tabs-item new-car-tabs-item">
-                        <a href="#car-characteristics" data-toggle="tab">Технические характеристики</a>
-                    </li>
-                    <li class="tabs-item new-car-tabs-item">
-                        <a href="#car-gallery" data-toggle="tab">Галерея</a>
-                    </li>
-                </ul>
-                <div class="tab-content new-car-tabs-content">
-                    <div id="car-description" class="tab-pane new-car-tab-panel fade in active">
-                        <div class="text-section">
-                            <p>Значимость этих проблем настолько очевидна, что сложившаяся структура организации в значительной степени обуславливает создание соответствующий условий активизации. Таким образом постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что сложившаяся структура организации в значительной степени обуславливает создание соответствующий условий активизации. Таким образом постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.</p>
-                            <p>Значимость этих проблем настолько очевидна, что сложившаяся структура организации в значительной степени обуславливает создание соответствующий условий активизации. Таким образом постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что сложившаяся структура организации в значительной степени обуславливает создание соответствующий условий активизации. Таким образом постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач.</p>
-                            <img src="img/img-text-page-big-2.jpg" alt="">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img src="img/img-text-page-2.jpg" alt="">
-                                </div>
-                                <div class="col-md-6">
-                                    <img src="img/img-text-page-1.jpg" alt="">
-                                </div>
-                            </div>
+        </div>
+    </section>
+    <section id="car-prices" class="section section-pt-none">
+        <div class="container">
+            <h2 class="section-title">Комплектация и цены</h2>
+            <div class="table-wrapper">
+                <table class="car-prices-table">
+                    <thead>
+                    <tr>
+                        <th><strong>Комплектация</strong></th>
+                        <th><strong>Двигатель</strong></th>
+                        <th><strong>Тип топлива</strong></th>
+                        <th><strong>КПП</strong></th>
+                        <th><strong>Привод</strong></th>
+                        <th><strong>Цена (р.)</strong></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td rowspan="2">Momentum</td>
+                        <td>T5 AWD 2.0 л, 249 л/с</td>
+                        <td>Бензин</td>
+                        <td>AT</td>
+                        <td>4x4 Полный</td>
+                        <td>3 955 000</td>
+                    </tr>
+                    <tr>
+                        <td>T5 AWD 2.0 л, 249 л/с</td>
+                        <td>Бензин</td>
+                        <td>AT</td>
+                        <td>4x4 Полный</td>
+                        <td>3 955 000</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Momentum</td>
+                        <td>T5 AWD 2.0 л, 249 л/с</td>
+                        <td>Бензин</td>
+                        <td>AT</td>
+                        <td>4x4 Полный</td>
+                        <td>3 955 000</td>
+                    </tr>
+                    <tr>
+                        <td>T5 AWD 2.0 л, 249 л/с</td>
+                        <td>Бензин</td>
+                        <td>AT</td>
+                        <td>4x4 Полный</td>
+                        <td>3 955 000</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Momentum</td>
+                        <td>T5 AWD 2.0 л, 249 л/с</td>
+                        <td>Бензин</td>
+                        <td>AT</td>
+                        <td>4x4 Полный</td>
+                        <td>3 955 000</td>
+                    </tr>
+                    <tr>
+                        <td>T5 AWD 2.0 л, 249 л/с</td>
+                        <td>Бензин</td>
+                        <td>AT</td>
+                        <td>4x4 Полный</td>
+                        <td>3 955 000</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Momentum</td>
+                        <td>T5 AWD 2.0 л, 249 л/с</td>
+                        <td>Бензин</td>
+                        <td>AT</td>
+                        <td>4x4 Полный</td>
+                        <td>3 955 000</td>
+                    </tr>
+                    <tr>
+                        <td>T5 AWD 2.0 л, 249 л/с</td>
+                        <td>Бензин</td>
+                        <td>AT</td>
+                        <td>4x4 Полный</td>
+                        <td>3 955 000</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section class="section section-pt-none">
+        <div class="container">
+            <h2 class="section-title">Технические характеристики</h2>
+            <div class="new-car-characteristics-2">
+                <div class="new-car-characteristics-2-in">
+                    <div>
+                        <table>
+                            <tr>
+                                <td><strong>Габариты:</strong></td>
+                                <td><span>4519 х 1831 х 1694</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Трансмиссия:</strong></td>
+                                <td><span>6МТ / 6 АТ</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Двигатель:</strong></td>
+                                <td>
+                                    <span>2.0 - 139</span>
+                                    <span>2.4 - 149</span>
+                                    <span>1.8 - 184</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Гарантия:</strong></td>
+                                <td><span>5 лет / 150 000 км*</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="new-car-characteristics-2-in">
+                    <div>
+                        <table>
+                            <tr>
+                                <td><strong>Расход топлива:</strong></td>
+                                <td>
+                                    <span>2.0 МТ 2WD - от 8.1</span>
+                                    <span>2.0 МТ 2WD - от 8.1</span>
+                                    <span>2.0 МТ 2WD - от 8.1</span>
+                                    <span>2.0 МТ 2WD - от 8.1</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Привод колёс:</strong></td>
+                                <td>
+                                    <span>Передний</span>
+                                    <span>Полный</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-pt-none section-pb-sm">
+        <div class="container">
+            <h2 class="section-title">Галерея</h2>
+            <ul class="nav nav-tabs new-car-tabs">
+                <li class="tabs-item active">
+                    <a href="#interior" data-toggle="tab">Интерьер</a>
+                </li>
+                <li class="tabs-item">
+                    <a href="#exterior" data-toggle="tab">Экстерьер</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="interior" class="tab-pane fade in active">
+                    <div class="row">
+                        <div class="col-6 col-md-4 car-gallery-item-wrapper">
+                            <a href="img/bg-welcome.jpg" class="car-gallery-item" data-fancybox="gallery">
+                                <img src="img/img-gallery-thumb.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 car-gallery-item-wrapper">
+                            <a href="img/bg-welcome.jpg" class="car-gallery-item" data-fancybox="gallery">
+                                <img src="img/img-gallery-thumb.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 car-gallery-item-wrapper">
+                            <a href="img/bg-welcome.jpg" class="car-gallery-item" data-fancybox="gallery">
+                                <img src="img/img-gallery-thumb.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 car-gallery-item-wrapper">
+                            <a href="img/bg-welcome.jpg" class="car-gallery-item" data-fancybox="gallery">
+                                <img src="img/img-gallery-thumb.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 car-gallery-item-wrapper">
+                            <a href="img/bg-welcome.jpg" class="car-gallery-item" data-fancybox="gallery">
+                                <img src="img/img-gallery-thumb.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 car-gallery-item-wrapper">
+                            <a href="img/bg-welcome.jpg" class="car-gallery-item" data-fancybox="gallery">
+                                <img src="img/img-gallery-thumb.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 car-gallery-item-wrapper">
+                            <a href="img/bg-welcome.jpg" class="car-gallery-item" data-fancybox="gallery">
+                                <img src="img/img-gallery-thumb.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 car-gallery-item-wrapper">
+                            <a href="img/bg-welcome.jpg" class="car-gallery-item" data-fancybox="gallery">
+                                <img src="img/img-gallery-thumb.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 car-gallery-item-wrapper">
+                            <a href="img/bg-welcome.jpg" class="car-gallery-item" data-fancybox="gallery">
+                                <img src="img/img-gallery-thumb.jpg" alt="">
+                            </a>
                         </div>
                     </div>
-                    <div id="car-prices" class="tab-pane new-car-tab-panel fade">
-                        <div class="table-wrapper">
-                            <table class="car-prices-table">
-                                <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Название <strong>120 000 руб.</strong></th>
-                                    <th>Название <strong>120 000 руб.</strong></th>
-                                    <th>Название <strong>120 000 руб.</strong></th>
-                                    <th>Название <strong>120 000 руб.</strong></th>
-                                    <th>Название <strong>120 000 руб.</strong></th>
-                                    <th>Название <strong>120 000 руб.</strong></th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>Характеристика 1</td>
-                                    <td><img src="img/ico-check.png" alt=""></td>
-                                    <td><img src="img/ico-check.png" alt=""></td>
-                                    <td><img src="img/ico-check.png" alt=""></td>
-                                    <td><img src="img/ico-check.png" alt=""></td>
-                                    <td><img src="img/ico-check.png" alt=""></td>
-                                    <td><img src="img/ico-check.png" alt=""></td>
-                                </tr>
-                                <tr>
-                                    <td>Характеристика 2</td>
-                                    <td><img src="img/ico-check.png" alt=""></td>
-                                    <td><img src="img/ico-check.png" alt=""></td>
-                                    <td><img src="img/ico-check.png" alt=""></td>
-                                    <td><img src="img/ico-no.png" alt=""></td>
-                                    <td><img src="img/ico-check.png" alt=""></td>
-                                    <td><img src="img/ico-check.png" alt=""></td>
-                                </tr>
-                                <tr>
-                                    <td>Характеристика 3</td>
-                                    <td><img src="img/ico-check.png" alt=""></td>
-                                    <td><img src="img/ico-check.png" alt=""></td>
-                                    <td><img src="img/ico-no.png" alt=""></td>
-                                    <td><img src="img/ico-check.png" alt=""></td>
-                                    <td><img src="img/ico-check.png" alt=""></td>
-                                    <td><img src="img/ico-check.png" alt=""></td>
-                                </tr>
-                                <tr>
-                                    <td>Характеристика 4</td>
-                                    <td><img src="img/ico-no.png" alt=""></td>
-                                    <td><img src="img/ico-check.png" alt=""></td>
-                                    <td><img src="img/ico-check.png" alt=""></td>
-                                    <td><img src="img/ico-check.png" alt=""></td>
-                                    <td><img src="img/ico-check.png" alt=""></td>
-                                    <td><img src="img/ico-no.png" alt=""></td>
-                                </tr>
-                                </tbody>
-                            </table>
+                </div>
+                <div id="exterior" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-6 col-md-4 car-gallery-item-wrapper">
+                            <a href="img/bg-welcome.jpg" class="car-gallery-item" data-fancybox="gallery2">
+                                <img src="img/img-gallery-thumb.jpg" alt="">
+                            </a>
                         </div>
-                    </div>
-                    <div id="car-characteristics" class="tab-pane new-car-tab-panel fade">
-                        <div class="table-wrapper">
-                            <table class="car-characteristics-table">
-                                <thead>
-                                <tr>
-                                    <th colspan="3">Двигатель</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>Тип топлива</td>
-                                    <td colspan="2">бензиновый</td>
-                                </tr>
-                                <tr>
-                                    <td>Тип двигателя</td>
-                                    <td>1.0 MPI</td>
-                                    <td>1.2 MPI</td>
-                                </tr>
-                                <tr>
-                                    <td>Тип топлива</td>
-                                    <td colspan="2">бензиновый</td>
-                                </tr>
-                                <tr>
-                                    <td>Тип двигателя</td>
-                                    <td>1.0 MPI</td>
-                                    <td>1.2 MPI</td>
-                                </tr>
-                                <tr>
-                                    <td>Тип топлива</td>
-                                    <td colspan="2">бензиновый</td>
-                                </tr>
-                                <tr>
-                                    <td>Тип двигателя</td>
-                                    <td>1.0 MPI</td>
-                                    <td>1.2 MPI</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <table class="car-characteristics-table">
-                                <thead>
-                                <tr>
-                                    <th colspan="3">Трансимиссия</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>Тип топлива</td>
-                                    <td colspan="2">бензиновый</td>
-                                </tr>
-                                <tr>
-                                    <td>Тип двигателя</td>
-                                    <td>1.0 MPI</td>
-                                    <td>1.2 MPI</td>
-                                </tr>
-                                <tr>
-                                    <td>Тип топлива</td>
-                                    <td colspan="2">бензиновый</td>
-                                </tr>
-                                <tr>
-                                    <td>Тип двигателя</td>
-                                    <td>1.0 MPI</td>
-                                    <td>1.2 MPI</td>
-                                </tr>
-                                <tr>
-                                    <td>Тип топлива</td>
-                                    <td colspan="2">бензиновый</td>
-                                </tr>
-                                <tr>
-                                    <td>Тип двигателя</td>
-                                    <td>1.0 MPI</td>
-                                    <td>1.2 MPI</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                        <div class="col-6 col-md-4 car-gallery-item-wrapper">
+                            <a href="img/bg-welcome.jpg" class="car-gallery-item" data-fancybox="gallery2">
+                                <img src="img/img-gallery-thumb.jpg" alt="">
+                            </a>
                         </div>
-                    </div>
-                    <div id="car-gallery" class="tab-pane new-car-tab-panel fade">
-                        <ul class="nav nav-tabs car-gallery-filter">
-                            <li class="tabs-item active">
-                                <a href="#interior" data-toggle="tab" class="car-gallery-filter-link">Интерьер</a>
-                            </li>
-                            <li class="tabs-item">
-                                <a href="#exterior" data-toggle="tab" class="car-gallery-filter-link">Экстерьер</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div id="interior" class="tab-pane fade in active">
-                                <div class="row">
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="exterior" class="tab-pane fade">
-                                <div class="row">
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-6 col-md-4 col-lg-3 car-gallery-item-wrapper">
-                                        <a href="img/img-product-slider-big.jpg" class="car-gallery-item" data-fancybox="gallery">
-                                            <img src="img/img-gallery-small.jpg" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-6 col-md-4 car-gallery-item-wrapper">
+                            <a href="img/bg-welcome.jpg" class="car-gallery-item" data-fancybox="gallery2">
+                                <img src="img/img-gallery-thumb.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 car-gallery-item-wrapper">
+                            <a href="img/bg-welcome.jpg" class="car-gallery-item" data-fancybox="gallery2">
+                                <img src="img/img-gallery-thumb.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 car-gallery-item-wrapper">
+                            <a href="img/bg-welcome.jpg" class="car-gallery-item" data-fancybox="gallery2">
+                                <img src="img/img-gallery-thumb.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 car-gallery-item-wrapper">
+                            <a href="img/bg-welcome.jpg" class="car-gallery-item" data-fancybox="gallery2">
+                                <img src="img/img-gallery-thumb.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 car-gallery-item-wrapper">
+                            <a href="img/bg-welcome.jpg" class="car-gallery-item" data-fancybox="gallery2">
+                                <img src="img/img-gallery-thumb.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 car-gallery-item-wrapper">
+                            <a href="img/bg-welcome.jpg" class="car-gallery-item" data-fancybox="gallery2">
+                                <img src="img/img-gallery-thumb.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4 car-gallery-item-wrapper">
+                            <a href="img/bg-welcome.jpg" class="car-gallery-item" data-fancybox="gallery2">
+                                <img src="img/img-gallery-thumb.jpg" alt="">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -509,203 +472,258 @@
         </div>
     </section>
 </div>
+
 <footer>
-    <div class="container footer-container">
-        <div class="footer-menu-wrapper">
-            <ul class="footer-menu footer-menu-excursions">
-                <li class="footer-menu-item">
-                    <a href="index.html" target="_blank" class="footer-menu-link">Главная</a>
-                </li>
-                <li class="footer-menu-item">
-                    <span class="footer-menu-link">Автомобили</span>
-                    <ul class="footer-submenu">
-                        <li class="footer-submenu-item">
-                            <a href="index.html#cars" class="footer-submenu-link">Покупка нового авто</a>
-                        </li>
-                        <li class="footer-submenu-item">
-                            <a href="catalog.html" class="footer-submenu-link">Авто с пробегом</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="footer-menu-item">
-                    <span class="footer-menu-link">Услуги</span>
-                    <ul class="footer-submenu">
-                        <li class="footer-submenu-item">
-                            <a href="service-page-2.html" class="footer-submenu-link">Кредитование</a>
-                        </li>
-                        <li class="footer-submenu-item">
-                            <a href="service-page-2.html" class="footer-submenu-link">Страхование</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="footer-menu">
-                <li class="footer-menu-item">
-                    <span class="footer-menu-link">Сервис</span>
-                    <ul class="footer-submenu">
-                        <li class="footer-submenu-item">
-                            <a href="service-page.html" class="footer-submenu-link">Слесарный ремонт</a>
-                        </li>
-                        <li class="footer-submenu-item">
-                            <a href="service-page.html" class="footer-submenu-link">Кузовной ремонт</a>
-                        </li>
-                        <li class="footer-submenu-item">
-                            <a href="service-page.html" class="footer-submenu-link">Запчасти</a>
-                        </li>
-                        <li class="footer-submenu-item">
-                            <a href="service-page.html" class="footer-submenu-link">Запись на сервис</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="footer-menu">
-                <li class="footer-menu-item">
-                    <a href="service-page-2.html" class="footer-menu-link">Корпоративным клиентам</a>
-                </li>
-                <li class="footer-menu-item">
-                    <a href="special-offers.html" class="footer-menu-link">Спецпредложения</a>
-                </li>
-                <li class="footer-menu-item">
-                    <a href="about-company.html" class="footer-menu-link">О компании</a>
-                </li>
-                <li class="footer-menu-item">
-                    <a href="news.html" class="footer-menu-link">Новости</a>
-                </li>
-                <li class="footer-menu-item">
-                    <a href="contacts.html" class="footer-menu-link">Контакты</a>
-                </li>
-            </ul>
-        </div>
-        <div class="footer-contacts">
-            <p class="footer-worktime">Мы рады видеть Вас с 9:00 до 22:00 ежедневно</p>
-            <p class="footer-tel"><a href="tel:+74957265144">+7 (495) 726 51 44</a></p>
-            <p class="footer-tel"><a href="tel:84994900984">8 (499) 490 09 84</a></p>
-            <p class="footer-copyright">© 2019 «ОБУХОВ» — официальный дилер Geely</p>
-        </div>
+    <div class="container">
+        <ul class="footer-menu">
+            <li class="footer-menu-item">
+                <a href="index.html" class="footer-menu-link">Главная</a>
+            </li>
+            <li class="footer-menu-item footer-menu-item-with-submenu">
+                <span class="footer-menu-link">О нас</span>
+                <ul class="footer-submenu">
+                    <li class="footer-submenu-item">
+                        <a href="about-company.html" class="footer-submenu-link">О компании</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="vacancies.html" class="footer-submenu-link">Вакансии</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="contacts.html" class="footer-submenu-link">Контакты</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="footer-menu-item footer-menu-item-with-submenu">
+                <span class="footer-menu-link">Автомобили</span>
+                <ul class="footer-submenu">
+                    <li class="footer-submenu-item">
+                        <a href="" class="footer-submenu-link">Покупка нового авто</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="new-car-page.html" class="footer-submenu-link">Страница нового авто</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="catalog.html" class="footer-submenu-link">Авто с пробегом</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="car-page.html" class="footer-submenu-link">Страница автомобиля с пробегом</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="footer-menu-item footer-menu-item-with-submenu">
+                <span class="footer-menu-link">Сервис</span>
+                <ul class="footer-submenu">
+                    <li class="footer-submenu-item">
+                        <a href="service-page.html" class="footer-submenu-link">Слесарный ремонт</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="service-page.html" class="footer-submenu-link">Кузовной ремонт</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="service-page.html" class="footer-submenu-link">Аксессуары</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="service-page.html" class="footer-submenu-link">ТО</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="service-page.html" class="footer-submenu-link">Запись на сервис</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="footer-menu-item footer-menu-item-with-submenu">
+                <span class="footer-menu-link">Покупателям</span>
+                <ul class="footer-submenu">
+                    <li class="footer-submenu-item">
+                        <a href="service-page-2.html" class="footer-submenu-link">Страхование</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="service-page-2.html" class="footer-submenu-link">Кредитование</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="service-page-2.html" class="footer-submenu-link">Корпоративным клиентам</a>
+                    </li>
+                    <li class="footer-submenu-item">
+                        <a href="special-offers.html" class="footer-submenu-link">Спецпредложения</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="footer-menu-item footer-menu-item-with-submenu">
+                <a href="news.html" class="footer-menu-link">Новости</a>
+                <ul class="footer-submenu">
+                    <li class="footer-submenu-item">
+                        <a href="text-page.html" class="footer-submenu-link">Страница статьи</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p class="footer-tel"><a href="tel:84994551162">8 (499) 455 1162</a></p>
+        <p class="footer-address">108811, г. Москва, пос. Московский, дер. Картмазово, 24 км Киевского шоссе, владение 1 (4 км от МКАД).</p>
+        <a href="index.html" class="footer-logo">
+            <img class="footer-logo-img" src="img/logo.png" alt="">
+        </a>
     </div>
 </footer>
 
 <div id="request-popup" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog request-modal-dialog" role="document">
-        <div class="modal-content request-modal-content">
-            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">Закрыть</button>
-            <h3 class="modal-title">Отправить заявку</h3>
-            <form id="request-modal-form" class="request-modal-form">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"></button>
+            <h3 class="modal-title section-title">Обратный звонок</h3>
+            <form id="request-modal-form">
                 <div class="form-group">
                     <input id="request-modal-name" name="request-modal-name" type="text" class="form-control" placeholder="Имя*" required>
                 </div>
                 <div class="form-group">
                     <input id="request-modal-tel" name="request-modal-tel" type="tel" class="form-control" placeholder="+7 (___) ___ __ __*" required>
                 </div>
-                <div class="form-group">
-                    <button class="btn btn-default btn-block" type="submit">Перезвонить</button>
-                </div>
                 <p class="form-disclaimer">Нажимая &laquo;Перезвонить&raquo; Вы даете согласие на&nbsp;обработку
                     персональных данных и&nbsp;соглашаетесь c&nbsp;<a href="text-page.html">пользовательским соглашением и&nbsp;политикой
                         конфиденциальности</a>.</p>
+                <button class="btn btn-border btn-big" type="submit">Отправить</button>
             </form>
         </div>
     </div>
 </div>
-<div id="testdrive-popup" class="modal fade" tabindex="-1" role="dialog" >
+<div id="service-popup" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog testdrive-modal-dialog" role="document">
         <div class="modal-content testdrive-modal-content">
-            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">Закрыть</button>
-            <h3 class="modal-title">Записаться на тест драйв</h3>
-            <form id="testdrive-modal-form" class="application-modal-form">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"></button>
+            <h3 class="modal-title section-title">Записаться на тест драйв</h3>
+            <form id="testdrive-modal-form">
                 <div class="form-group">
                     <input id="testdrive-modal-name" name="testdrive-modal-name" type="text" class="form-control" placeholder="Имя*" required>
                 </div>
                 <div class="form-group">
-                    <input id="testdrive-modal-tel" name="testdrive-modal-tel" type="tel" class="form-control" placeholder="+7 (___) ___ __ __*" required>
+                    <input id="testdrive-modal-tel"
+                           name="testdrive-modal-tel"
+                           type="tel"
+                           class="form-control"
+                           placeholder="+7 (___) ___ __ __*"
+                           required>
                 </div>
-                <div class="form-group textarea-form-group">
+                <div class="form-group">
+                    <label class="form-label">Выберите дату</label>
+                    <input id="testdrive-date" name="testdrive-date" type="text" class="form-control form-control-date datepicker-here"
+                           placeholder="20.08.2020">
+                </div>
+                <div class="form-group">
                     <textarea name="testdrive-modal-comment" id="testdrive-modal-comment" placeholder="Комментарий" class="form-control"></textarea>
                 </div>
-                <button class="btn btn-default btn-block" type="submit">Отправить</button>
                 <p class="form-disclaimer">Нажимая &laquo;Перезвонить&raquo; Вы даете согласие на&nbsp;обработку
                     персональных данных и&nbsp;соглашаетесь c&nbsp;<a href="text-page.html">пользовательским соглашением и&nbsp;политикой
                         конфиденциальности</a>.</p>
+                <button class="btn btn-border btn-big" type="submit">Отправить</button>
             </form>
         </div>
     </div>
 </div>
-<div id="to-popup" class="modal fade" tabindex="-1" role="dialog" >
-    <div class="modal-dialog to-modal-dialog" role="document">
-        <div class="modal-content to-modal-content">
-            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">Закрыть</button>
-            <h3 class="modal-title">Записаться на ТО</h3>
-            <form id="to-modal-form" class="application-modal-form">
-                <div class="form-group">
-                    <input id="to-modal-name" name="to-modal-name" type="text" class="form-control" placeholder="Имя*" required>
-                </div>
-                <div class="form-group">
-                    <input id="to-modal-tel" name="to-modal-tel" type="tel" class="form-control" placeholder="+7 (___) ___ __ __*" required>
-                </div>
-                <div class="form-group textarea-form-group">
-                    <textarea name="to-modal-comment" id="to-modal-comment" placeholder="Комментарий" class="form-control"></textarea>
-                </div>
-                <button class="btn btn-default btn-block" type="submit">Отправить</button>
-                <p class="form-disclaimer">Нажимая &laquo;Перезвонить&raquo; Вы даете согласие на&nbsp;обработку
-                    персональных данных и&nbsp;соглашаетесь c&nbsp;<a href="text-page.html">пользовательским соглашением и&nbsp;политикой
-                        конфиденциальности</a>.</p>
-            </form>
-        </div>
-    </div>
-</div>
-<div id="tradein-popup" class="modal fade" tabindex="-1" role="dialog" >
-    <div class="modal-dialog tradein-modal-dialog" role="document">
-        <div class="modal-content tradein-modal-content">
-            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">Закрыть</button>
-            <h3 class="modal-title">Trade in</h3>
-            <form id="tradein-modal-form" class="application-modal-form">
+<div id="tradein-popup" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"></button>
+            <h3 class="modal-title section-title">Trade-in</h3>
+            <form id="tradein-modal-form">
                 <div class="form-group">
                     <input id="tradein-modal-name" name="tradein-modal-name" type="text" class="form-control" placeholder="Имя*" required>
                 </div>
                 <div class="form-group">
-                    <input id="tradein-modal-tel" name="tradein-modal-tel" type="tel" class="form-control" placeholder="+7 (___) ___ __ __*" required>
+                    <input id="tradein-modal-tel"
+                           name="tradein-modal-tel"
+                           type="tel"
+                           class="form-control"
+                           placeholder="+7 (___) ___ __ __*"
+                           required>
                 </div>
-                <div class="form-group textarea-form-group">
+                <div class="form-group">
+                    <label class="form-label">Выберите дату</label>
+                    <input id="tradein-date" name="tradein-date" type="text" class="form-control form-control-date datepicker-here"
+                           placeholder="20.08.2020">
+                </div>
+                <div class="form-group">
                     <textarea name="tradein-modal-comment" id="tradein-modal-comment" placeholder="Комментарий" class="form-control"></textarea>
                 </div>
-                <button class="btn btn-default btn-block" type="submit">Отправить</button>
                 <p class="form-disclaimer">Нажимая &laquo;Перезвонить&raquo; Вы даете согласие на&nbsp;обработку
                     персональных данных и&nbsp;соглашаетесь c&nbsp;<a href="text-page.html">пользовательским соглашением и&nbsp;политикой
                         конфиденциальности</a>.</p>
+                <button class="btn btn-border btn-big" type="submit">Отправить</button>
             </form>
         </div>
     </div>
 </div>
-<div id="credit-popup" class="modal fade" tabindex="-1" role="dialog" >
-    <div class="modal-dialog credit-modal-dialog" role="document">
-        <div class="modal-content credit-modal-content">
-            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">Закрыть</button>
-            <h3 class="modal-title">Купить в кредит</h3>
-            <form id="credit-modal-form" class="application-modal-form">
+<div id="credit-popup" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"></button>
+            <h3 class="modal-title section-title">Trade-in</h3>
+            <form id="credit-modal-form">
                 <div class="form-group">
                     <input id="credit-modal-name" name="credit-modal-name" type="text" class="form-control" placeholder="Имя*" required>
                 </div>
                 <div class="form-group">
-                    <input id="credit-modal-tel" name="credit-modal-tel" type="tel" class="form-control" placeholder="+7 (___) ___ __ __*" required>
+                    <input id="credit-modal-tel"
+                           name="credit-modal-tel"
+                           type="tel"
+                           class="form-control"
+                           placeholder="+7 (___) ___ __ __*"
+                           required>
                 </div>
-                <div class="form-group textarea-form-group">
+                <div class="form-group">
+                    <label class="form-label">Выберите дату</label>
+                    <input id="credit-date" name="credit-date" type="text" class="form-control form-control-date datepicker-here"
+                           placeholder="20.08.2020">
+                </div>
+                <div class="form-group">
                     <textarea name="credit-modal-comment" id="credit-modal-comment" placeholder="Комментарий" class="form-control"></textarea>
                 </div>
-                <button class="btn btn-default btn-block" type="submit">Отправить</button>
                 <p class="form-disclaimer">Нажимая &laquo;Перезвонить&raquo; Вы даете согласие на&nbsp;обработку
                     персональных данных и&nbsp;соглашаетесь c&nbsp;<a href="text-page.html">пользовательским соглашением и&nbsp;политикой
                         конфиденциальности</a>.</p>
+                <button class="btn btn-border btn-big" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="car-request-popup" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"></button>
+            <h3 class="modal-title section-title">Trade-in</h3>
+            <form id="car-request-modal-form">
+                <div class="form-group">
+                    <input id="car-request-modal-name" name="car-request-modal-name" type="text" class="form-control" placeholder="Имя*" required>
+                </div>
+                <div class="form-group">
+                    <input id="car-request-modal-tel"
+                           name="car-request-modal-tel"
+                           type="tel"
+                           class="form-control"
+                           placeholder="+7 (___) ___ __ __*"
+                           required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Выберите дату</label>
+                    <input id="car-request-date" name="car-request-date" type="text" class="form-control form-control-date datepicker-here"
+                           placeholder="20.08.2020">
+                </div>
+                <div class="form-group">
+                    <textarea name="car-request-modal-comment" id="car-request-modal-comment" placeholder="Комментарий"
+                              class="form-control"></textarea>
+                </div>
+                <p class="form-disclaimer">Нажимая &laquo;Перезвонить&raquo; Вы даете согласие на&nbsp;обработку
+                    персональных данных и&nbsp;соглашаетесь c&nbsp;<a href="text-page.html">пользовательским соглашением и&nbsp;политикой
+                        конфиденциальности</a>.</p>
+                <button class="btn btn-border btn-big" type="submit">Отправить</button>
             </form>
         </div>
     </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="js/bootstrap-collapse-transition.min.js"></script>
-<script src="js/bootstrap-modal.js"></script>
-<script src="js/bootstrap-tabs.min.js"></script>
-<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/bootstrap-modal-tabs-collapse-transition.min.js"></script>
+<script src="js/swiper.min.js"></script>
 <script src="js/jquery.maskedinput.js"></script>
+<script src="js/datepicker.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

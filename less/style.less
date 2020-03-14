@@ -280,6 +280,9 @@ body {
     &-pb-sm {
         padding-bottom: 25px;
     }
+    &-pt-none {
+        padding-top: 0;
+    }
 }
 .text-section {
     .form {
@@ -495,10 +498,10 @@ body {
 }
 /*Gallery*/
 .fancybox-bg {
-    background-color: #ffffff;
+    background-color: @text-color;
 }
 .fancybox-is-open .fancybox-bg {
-    opacity: 0.5;
+    opacity: 0.8;
 }
 .fancybox-toolbar {
     opacity: 1;
@@ -507,28 +510,30 @@ body {
     opacity: 1;
 }
 .fancybox-arrow {
-    width: 70px;
-    height: 70px;
+    border: 1px solid @accent-color;
+    width: 60px;
+    height: 60px;
     opacity: 1;
     &::after {
         content: '';
         position: absolute;
         top: 50%;
         left: 50%;
-        margin-top: -14px;
-        margin-left: -9px;
-        width: 18px;
-        height: 28px;
+        margin-top: -8px;
+        margin-left: -4.5px;
+        width: 9px;
+        height: 16px;
         background-color: transparent;
         background-image: url("../img/sprite.png");
         background-repeat: no-repeat;
         background-size: auto;
-        background-position: -22px -12px;
+        background-position: -12px -16px;
     }
     &:hover, &:active {
         outline: none;
+        background-color: @accent-color;
         &::after {
-            background-position: -22px -44px;
+            background-position: -36px -16px;
         }
     }
     &--right {
@@ -544,7 +549,7 @@ body {
 }
 .fancybox-button {
     .border-radius(0);
-    background-color: @accent-color-dark;
+    background-color: @accent-color;
     &:hover:not([disabled]), &:active {
         background-color: fade(@accent-color, 80%)
     }
@@ -559,11 +564,6 @@ iframe, video {
 /*=TEXT=*/
 strong {
     font-weight: bold;
-}
-.text-accent {
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 1.3;
 }
 /*titles*/
 h1 {
@@ -585,9 +585,9 @@ h2 {
 }
 h3 {
     margin-bottom: 20px;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.25;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 1.3;
     text-align: left;
     color: @text-color;
 }
@@ -729,6 +729,9 @@ a {
 /***pagination***/
 .pagination {
     text-align: left;
+    &-right {
+        text-align: right;
+    }
     .page {
         display: inline-block;
         vertical-align: middle;
@@ -820,6 +823,9 @@ a.page.active, a.page:hover, a.page:active, a.page:focus {
             opacity: 0.3;
         });
     }
+}
+.form-control-sm {
+    height: 30px;
 }
 .form-control-date {
     width: 130px;
@@ -922,6 +928,10 @@ textarea.form-control {
     background: #ffffff;
     .box-shadow-none();
 }
+.form-control-sm .jq-selectbox__select{
+    height: 30px;
+    line-height: 30px;
+}
 .form-control.jq-selectbox.focused .jq-selectbox__select {
     border: none;
 }
@@ -953,6 +963,9 @@ textarea.form-control {
     background-image: url("../img/sprite.png");
     background-position: 0 -36px;
     cursor: pointer;
+}
+.form-control-sm .jq-selectbox__trigger-arrow {
+    right: 10px;
 }
 .form-control  .jq-selectbox__select-text {
     white-space: nowrap;
@@ -1013,29 +1026,29 @@ textarea.form-control {
     height: 30px;
     &-line {
         top: 16px;
-        .border-radius(4px);
+        .border-radius(0);
         width: 100%;
-        height: 8px;
-        background-color: @border-color;
+        height: 10px;
+        background-color: #ffffff;
     }
     &-bar {
         top: 16px;
-        height: 8px;
-        .border-radius(4px);
-        background-color: @accent-color;
+        height: 10px;
+        .border-radius(0);
+        background-color: @accent-color-dark;
     }
     &-single,
     &-from,
     &-to {
         top: 10px;
         z-index: 1;
-        .border-radius(50%);
+        .border-radius(0);
         height: 20px;
         width: 20px;
         font-size: 0;
         line-height: 0;
         color: transparent;
-        background-color: @accent-color-dark;
+        background-color: @accent-color;
         cursor: pointer;
     }
 }
@@ -1124,12 +1137,6 @@ a.welcome-btn {
     &-top {
         display: block;
         .transition();
-        &:hover {
-            .car-card-type {
-                border-bottom-color: @accent-color;
-                font-weight: 600;
-            }
-        }
     }
     &-type {
         margin-bottom: 15px;
@@ -1158,6 +1165,15 @@ a.welcome-btn {
             max-width: 100%;
         }
     }
+    &-description {
+        margin-bottom: 15px;
+        font-weight: 300;
+        + .car-card-price {
+            strong {
+                font-size: 22px;
+            }
+        }
+    }
     &-price {
         margin-bottom: 15px;
         font-weight: 300;
@@ -1173,6 +1189,20 @@ a.welcome-btn {
         .align-items-center();
         .btn {
             margin-right: 30px;
+        }
+    }
+    &:hover, &:focus, &:active {
+        .car-card-type {
+            border-bottom-color: @accent-color;
+            font-weight: 600;
+        }
+        .more-link:only-child {
+            color: @text-color;
+        }
+        .btn-border {
+            border: 1px solid @accent-color;
+            color: #ffffff;
+            background-color: @accent-color;
         }
     }
 }
@@ -1486,16 +1516,28 @@ a.welcome-btn {
 }
 /*=CATALOG=*/
 .catalog-filter {
+    padding: 25px;
+    background-color: @bg-color-middle;
     &-btn {
         display: none;
     }
     &-item {
-        margin-bottom: 35px;
+        border-bottom: 1px solid #ffffff;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        &:first-child {
+            padding-top: 0;
+        }
+        &:nth-last-child(2) {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
     }
     &-title {
-        margin-bottom: 10px;
-        font-weight: 700;
-        color: @accent-color-dark;
+        margin-bottom: 15px;
+        padding-left: 10px;
+        font-weight: 600;
+        color: @text-color;
         &[role="button"] {
             position: relative;
             display: block;
@@ -1512,7 +1554,7 @@ a.welcome-btn {
                 height: 8px;
                 background-repeat: no-repeat;
                 background-image: url("../img/sprite.png");
-                background-position: -30px 0;
+                background-position: 0 -36px;
             }
         }
     }
@@ -1520,15 +1562,17 @@ a.welcome-btn {
         .flex();
         .space-between();
         .align-items-center();
+        margin-top: 40px;
     }
     &-reset-btn {
         position: relative;
         margin-left: 15px;
+        margin-right: 20px;
         padding-right: 25px;
         font-weight: 400;
         font-size: 16px;
         text-align: left;
-        color: @text-color;
+        color: @accent-color;
         .transition();
         &:after {
             content: '';
@@ -1540,13 +1584,13 @@ a.welcome-btn {
             height: 12px;
             background-image: url("../img/sprite.png");
             background-repeat: no-repeat;
-            background-position: -44px -60px;
+            background-position: -31px 0;
         }
         &:hover, &:active, &:focus {
-            color: @text-color-2-dark;
+            color: @text-color;
             opacity: 1;
             &::after {
-                background-position: -61px -60px;
+                background-position: 0 0;
             }
         }
     }
@@ -1650,27 +1694,40 @@ input[type="checkbox"] {
     padding-left: 40px;
     padding-top: 2px;
     &:hover {
-        color: @text-color-2-dark;
+        color: @accent-color;
     }
     &::before {
         content: '';
         position: absolute;
         left: 0;
-        top: 0;
+        top: 2px;
         .box-sizing();
-        .border-radius(6px);
-        border: 2px solid @border-color;
-        width: 26px;
-        height: 26px;
-        background-repeat: no-repeat;
-        background-position: center center;
+        width: 22px;
+        height: 22px;
+        background-color: #ffffff;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: 7px;
+        .box-sizing();
+        width: 12px;
+        height: 12px;
+        background-color: @accent-color;
+        opacity: 0;
+        .transition();
     }
 }
 input[type="checkbox"]:checked + .checkbox-label {
-    &::before {
+    &::after {
+        opacity: 1;
     }
 }
 /*=CAR PAGE=*/
+.product-slider-big-wrapper {
+    padding-left: 60px;
+}
 .product-slider-big {
     margin-bottom: 20px;
 }
@@ -1690,42 +1747,43 @@ input[type="checkbox"]:checked + .checkbox-label {
 }
 .product-slider-small-wrapper {
     position: relative;
-    padding-right: 35px;
+    padding-left: 100px;
     .swiper-button {
-        width: 16px;
-        height: 24px;
+        left: 0;
+        margin-top: 0;
+        border: 1px solid @accent-color;
+        width: 60px;
+        height: 60px;
         &::after {
-            margin-top: -12px;
-            margin-left: -8px;
-            width: 16px;
-            height: 24px;
+            margin-left: -4.5px;
+            margin-top: -8px;
+            width: 9px;
+            height: 16px;
+        }
+        &:hover, &:active {
+            background-color: @accent-color;
         }
     }
     .swiper-button-prev {
-        bottom: 50%;
-        left: auto;
-        right: 0;
-        margin-top: 0;
-        margin-bottom: -36px;
+        top: auto;
+        bottom: 5px;
         &::after {
-            background-position: -76px -77px;
+            background-position: 0 -16px;
         }
         &:hover, &:active {
             &::after {
-                background-position: -110px -77px;
+                background-position: -24px -16px;
             }
         }
     }
     .swiper-button-next {
-        top: 50%;
-        right: 0;
-        margin-top: -36px;
+        top: 5px;
         &::after {
-            background-position: -92px -77px;
+            background-position: -12px -16px;
         }
         &:hover, &:active {
             &::after {
-                background-position: -128px -77px;
+                background-position: -36px -16px;
             }
         }
     }
@@ -1733,7 +1791,8 @@ input[type="checkbox"]:checked + .checkbox-label {
 .product-slide-small {
     overflow: hidden;
     position: relative;
-    height: 160px;
+    height: 140px;
+    background-color: @bg-color-middle;
     cursor: pointer;
     img {
         position: absolute;
@@ -1744,40 +1803,32 @@ input[type="checkbox"]:checked + .checkbox-label {
         .translateYX(-50%, -50%);
     }
 }
+.car-prices {
+    margin-bottom: 30px;
+}
 .car-price {
-    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 1;
     strong {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: 700;
+        font-size: 24px;
     }
-    > span {
-        display: block;
-        padding-left: 8px;
-        font-weight: bold;
-        font-size: 26px;
-        color: @accent-color-dark;
+    &-credit {
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 1;
+        color: @accent-color;
     }
 }
 .car-characteristics {
     .box-sizing();
+    margin-right: -30px;
     margin-bottom: 40px;
-    .border-radius(6px);
-    border: 2px solid @border-color;
-    padding: 20px 35px;
-    max-width: 400px;
+    border: 2px solid @bg-color-middle;
+    padding: 20px 25px;
+    &-dark {
+    }
     li {
         position: relative;
-        padding-left: 35px;
-        &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 4px;
-            width: 20px;
-            height: 14px;
-            background-repeat: no-repeat;
-        }
         strong {
             display: block;
             margin-bottom: 5px;
@@ -1785,106 +1836,55 @@ input[type="checkbox"]:checked + .checkbox-label {
         }
         span {
             display: block;
-            padding-left: 8px;
+            line-height: 1.375;
         }
     }
     li + li {
-        margin-top: 20px;
+        margin-top: 15px;
     }
 }
 .car-links {
+    .flex();
+    .flex-start();
+    margin-top: 40px;
     li + li {
-        margin-top: 30px;
-    }
-}
-.car-link {
-    position: relative;
-    display: inline-block;
-    padding: 8px 0 8px 55px;
-    font-weight: bold;
-    font-size: 18px;
-    color: @text-color-2-dark;
-    &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        background-repeat: no-repeat;
-        background-image: url("../img/sprite.png");
-    }
-    &:hover, &:active, &:focus {
-        color: @accent-color-dark;
-    }
-    &-testdrive {
-        &::before {
-            margin-top: -20px;
-            width: 41px;
-            height: 40px;
-            background-position: -172px 0;
-        }
-        &:hover, &:active, &:focus {
-            &::before {
-                background-position: -172px -46px;
-            }
-        }
-    }
-    &-credit {
-        padding: 6px 0 6px 55px;
-        &::before {
-            margin-top: -18px;
-            width: 41px;
-            height: 36px;
-            background-position: -221px 0;
-        }
-        &:hover, &:active, &:focus {
-            &::before {
-                background-position: -221px -46px;
-            }
-        }
-    }
-    &-tradein {
-        &::before {
-            margin-top: -18px;
-            width: 40px;
-            height: 36px;
-            background-position: -271px 0;
-        }
-        &:hover, &:active, &:focus {
-            &::before {
-                background-position: -271px -46px;
-            }
-        }
+        margin-left: 10px;
     }
 }
 /*=NEW CAR PAGE=*/
-.car-img-wrapper {
+.new-car-wrapper {
     position: relative;
-    padding-top: 105px;
+    > div[class*="col"] {
+        position: static;
+    }
+}
+.car-img-wrapper {
     img {
         display: block;
         max-width: 100%;
+        margin: 0 auto;
     }
 }
 .car-colors {
     position: absolute;
-    right: 0;
-    top: 20px;
+    right: 15px;
+    top: 0;
     .flex();
     .flex-end();
 }
 .car-color {
     position: relative;
     + .car-color {
-        margin-left: 20px;
+        margin-left: 10px;
     }
     &-label {
-        .border-radius(6px);
-        border: 2px solid transparent;
+        border: 1px solid transparent;
+        .box-sizing();
         width: 30px;
         height: 30px;
         .transition();
         &:hover {
-            border-color: @text-color-2-dark !important;
+            border: 4px solid @text-color-light !important;
         }
     }
     input[type="radio"] {
@@ -1894,55 +1894,28 @@ input[type="checkbox"]:checked + .checkbox-label {
         opacity: 0;
         &:checked {
             + .car-color-label {
-                border-color: @text-color-2-dark !important;
+                border: 4px solid @text-color-light !important;
             }
-        }
-    }
-}
-.new-car-prices {
-    margin-bottom: 20px;
-    &-item {
-        strong {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 700;
-        }
-        > span {
-            display: block;
-            span {
-                font-weight: bold;
-                font-size: 18px;
-                color: @accent-color-dark;
-            }
-        }
-        + .new-car-prices-item {
-            margin-top: 15px;
         }
     }
 }
 .new-car-characteristics {
     .flex();
     .space-between();
-    .border-radius(6px);
-    border: 2px solid @border-color;
-    &-in {
+    margin-right: -30px;
+    padding: 20px 25px;
+    background-color: @bg-color-middle;
+    ul {
         .box-sizing();
-        padding: 20px 15px;
         width: 50%;
         &:first-child {
-            border-right: 2px solid @border-color;
+            border-right: 1px solid #ffffff;
+            padding-right: 25px;
+        }
+        &:last-child {
+            padding-left: 25px;
         }
         li {
-            position: relative;
-            padding-left: 40px;
-            &::before {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 0;
-                background-repeat: no-repeat;
-                background-image: url("../img/sprite.png");
-            }
             + li {
                 margin-top: 15px;
             }
@@ -1953,50 +1926,53 @@ input[type="checkbox"]:checked + .checkbox-label {
             }
             span {
                 display: block;
-                padding-left: 8px;
+                line-height: 1.375;
             }
         }
     }
-    &-item-dimensions {
-        &::before {
-            width: 24px;
-            height: 24px;
-            background-position: 0 -110px;
-        }
-    }
-    &-item-transmission {
-        &::before {
-            width: 25px;
-            height: 34px;
-            background-position: -97px -110px;
-        }
-    }
-    &-item-engine {
-        &::before {
-            width: 26px;
-            height: 20px;
-            background-position: -66px -110px;
-        }
-    }
-    &-item-warranty {
-        &::before {
-            width: 30px;
-            height: 31px;
-            background-position: -164px -110px;
-        }
-    }
-    &-item-fuel {
-        &::before {
-            width: 30px;
-            height: 28px;
-            background-position: -30px -110px;
-        }
-    }
-    &-item-wheels {
-        &::before {
-            width: 30px;
-            height: 30px;
-            background-position: -129px -110px;
+}
+.new-car-characteristics-2 {
+    .flex();
+    .space-between();
+    margin: 0 auto;
+    max-width: 1060px;
+    &-in {
+        .box-sizing();
+        padding: 0 15px;
+        width: 50%;
+        div {
+            .box-sizing();
+            padding: 20px;
+            height: 100%;
+            background-color: @bg-color-middle;
+            table {
+                width: 100%;
+            }
+            td {
+                .box-sizing();
+                vertical-align: top;
+                width: 50%;
+                padding-bottom: 10px;
+            }
+            td:first-child {
+                border-right: 1px solid #ffffff;
+                padding-right: 25px;
+            }
+            td:last-child {
+                padding-left: 25px;
+            }
+            tr:last-child td {
+                padding-bottom: 0;
+            }
+            strong {
+                display: block;
+                font-weight: 700;
+                line-height: 1.375;
+            }
+            span {
+                display: block;
+                line-height: 1.375;
+            }
         }
     }
 }
@@ -2009,76 +1985,52 @@ input[type="checkbox"]:checked + .checkbox-label {
         margin-left: 30px;
     }
 }
-.new-caa-tabs-wrapper {
-    padding-top: 55px;
-}
 .new-car-tabs {
-    .flex();
-    .space-between();
-    margin: 0 1.5px 20px;
-    &-item {
-        .box-sizing();
-        padding: 0 1.5px;
-        width: 25%;
-        a {
-            .flex();
-            .flex-center();
-            .align-items-center();
-            .box-sizing();
-            .border-radius(6px);
-            padding: 5px;
-            height: 100%;
-            min-height: 46px;
-            font-size: 18px;
-            text-align: center;
-            color: @text-color;
-            background-color: @border-color;
-        }
-        &.active {
-            a {
-                font-weight: bold;
-                background-color: transparent;
-            }
-        }
-    }
-}
-.new-car-tab-panel {
-    .text-section {
-        padding-top: 20px;
-    }
-}
-.car-gallery-filter {
     position: relative;
     .flex();
-    .flex-end();
-    padding-bottom: 20px;
-    padding-top: 25px;
+    .flex-start();
+    margin-bottom: 30px;
     &::after {
         content: '';
         position: absolute;
+        left: 0;
         right: 0;
-        top: 0;
-        width: 456px;
-        height: 6px;
-        background: -moz-linear-gradient(0deg, @border-color 0%, @border-color 33.3%, @accent-color 33.3%, @accent-color 66.6%, @accent-color-dark 66.6%, @accent-color-dark 100%);
-        background: -webkit-gradient(linear, left top, right top, color-stop(0%, @border-color), color-stop(33.3%, @border-color), color-stop(33.3%, @accent-color), color-stop(66.6%, @accent-color), color-stop(66.6%, @accent-color-dark), color-stop(100%, @accent-color-dark));
-        background: -webkit-linear-gradient(0deg, @border-color 0%, @border-color 33.3%, @accent-color 33.3%, @accent-color 66.6%, @accent-color-dark 66.6%, @accent-color-dark 100%);
-        background: -o-linear-gradient(0deg, @border-color 0%, @border-color 33.3%, @accent-color 33.3%, @accent-color 66.6%, @accent-color-dark 66.6%, @accent-color-dark 100%);
-        background: -ms-linear-gradient(0deg, @border-color 0%, @border-color 33.3%, @accent-color 33.3%, @accent-color 66.6%, @accent-color-dark 66.6%, @accent-color-dark 100%);
-        background: linear-gradient(90deg, @border-color 0%, @border-color 33.3%, @accent-color 33.3%, @accent-color 66.6%, @accent-color-dark 66.6%, @accent-color-dark 100%);
+        z-index: 1;
+        bottom: 2px;
+        height: 1px;
+        background-color: @text-color-light;
     }
     li {
-        margin-right: 45px;
+        padding-bottom: 2px;
     }
     li.active {
-        .car-gallery-filter-link {
-            color: @accent-color-dark;
+        a {
+            font-weight: bold;
+            color: @accent-color;
+            &::after {
+                background-color: @accent-color;
+            }
         }
     }
-    &-link {
-        color: @text-color;
-        &:last-child {
-            margin-right: 0;
+    a {
+        position: relative;
+        display: block;
+        .box-sizing();
+        padding-bottom: 10px;
+        width: 170px;
+        font-size: 18px;
+        line-height: 1;
+        text-align: center;
+        color: @text-color-light;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -2px;
+            z-index: 2;
+            height: 4px;
+            background-color: transparent;
         }
         &:hover, &:focus, &:active {
             color: @accent-color-dark;
@@ -2101,19 +2053,16 @@ input[type="checkbox"]:checked + .checkbox-label {
 }
 .car-prices-table {
     border-collapse: separate;
-    border-spacing: 2px;
+    border-spacing: 1px;
     width: 100%;
     thead {
         th {
+            vertical-align: middle;
             .box-sizing();
-            border: 2px solid @accent-color-dark;
-            padding: 5px 15px;
-            text-align: left;
-            color: #ffffff;
-            background-color: @accent-color-dark;
-            &:first-child {
-                width: 26%;
-            }
+            border: 2px solid @bg-color-middle;
+            padding: 8px 10px;
+            text-align: center;
+            background-color: @bg-color-middle;
             strong {
                 display: block;
                 font-weight: bold;
@@ -2124,50 +2073,9 @@ input[type="checkbox"]:checked + .checkbox-label {
         td {
             .box-sizing();
             vertical-align: middle;
-            border: 2px solid @border-color;
-            &:first-child {
-                border: 2px solid @accent-color-dark;
-                padding: 5px 15px;
-                font-weight: bold;
-                text-align: left;
-                color: #ffffff;
-                background-color: @accent-color-dark;
-            }
-            img {
-                display: block;
-                margin: 0 auto;
-            }
-        }
-    }
-}
-.car-characteristics-table {
-    border-collapse: separate;
-    border-spacing: 2px;
-    width: 100%;
-    thead {
-        th {
-            .box-sizing();
-            border: 2px solid @accent-color-dark;
-            padding: 5px 15px;
-            font-weight: bold;
-            font-size: 22px;
+            border: 2px solid @bg-color-middle;
+            padding: 8px 10px;
             text-align: center;
-            color: #ffffff;
-            background-color: @accent-color-dark;
-        }
-    }
-    tbody {
-        td {
-            .box-sizing();
-            vertical-align: middle;
-            border: 2px solid @border-color;
-            padding: 5px 15px;
-            text-align: left;
-            &:first-child {
-                width: 26%;
-                font-weight: bold;
-                color: @text-color-2-dark;
-            }
         }
     }
 }
