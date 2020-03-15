@@ -1176,6 +1176,10 @@ a.page:focus {
   margin-left: auto;
   margin-right: 0;
 }
+.form .row {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .form-label {
   margin-bottom: 10px;
   color: #161618;

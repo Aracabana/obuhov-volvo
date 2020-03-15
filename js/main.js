@@ -280,4 +280,16 @@ $(document).ready(function () {
             $('html, body').animate({scrollTop: 0}, 400);
         });
     }
+    
+    //scroll
+    var links = $('.js-link');
+    links.click(function(e) {
+        e.preventDefault();
+        var link = $(this),
+            linkHref = link.attr('href'),
+            top = $(linkHref).offset().top - 100;
+        links.removeClass('active');
+        link.addClass('active');
+        $('body,html').animate({scrollTop: top}, 900);
+    });
 });
