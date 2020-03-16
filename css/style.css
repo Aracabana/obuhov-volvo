@@ -2706,6 +2706,12 @@ input[type="checkbox"]:checked + .checkbox-label::after {
   padding: 8px 10px;
   text-align: center;
 }
+.car-prices-table tbody td a:hover,
+.car-prices-table tbody td a:focus,
+.car-prices-table tbody td a:active {
+  text-decoration: underline;
+  color: #1c6bba;
+}
 /*=CONTACTS=*/
 .contacts-address {
   margin-bottom: 20px;

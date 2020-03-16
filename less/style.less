@@ -2079,6 +2079,12 @@ input[type="checkbox"]:checked + .checkbox-label {
             border: 2px solid @bg-color-middle;
             padding: 8px 10px;
             text-align: center;
+            a {
+                &:hover, &:focus, &:active {
+                    text-decoration: underline;
+                    color: @accent-color;
+                }
+            }
         }
     }
 }
