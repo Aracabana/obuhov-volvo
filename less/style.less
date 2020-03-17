@@ -427,8 +427,8 @@ body {
             border: 2px solid @bg-color-middle;
             font-weight: bold;
             font-size: 16px;
-            color: @text-color;
-            background-color: @bg-color-middle;
+            color: #ffffff;
+            background-color: @accent-color;
         }
         tbody {
             td {
@@ -452,6 +452,7 @@ body {
 }
 .table-wrapper {
     overflow: auto;
+    display: block;
     table {
         min-width: 460px;
     }
@@ -2062,10 +2063,11 @@ input[type="checkbox"]:checked + .checkbox-label {
         th {
             vertical-align: middle;
             .box-sizing();
-            border: 2px solid @bg-color-middle;
+            border: 2px solid @accent-color;
             padding: 8px 10px;
             text-align: center;
-            background-color: @bg-color-middle;
+            color: #ffffff;
+            background-color: @accent-color;
             strong {
                 display: block;
                 font-weight: bold;

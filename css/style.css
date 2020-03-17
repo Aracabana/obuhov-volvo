@@ -754,8 +754,8 @@ body {
   border: 2px solid #f4f4f4;
   font-weight: bold;
   font-size: 16px;
-  color: #161618;
-  background-color: #f4f4f4;
+  color: #ffffff;
+  background-color: #1c6bba;
 }
 .text-section table tbody td {
   border: 2px solid #f4f4f4;
@@ -775,6 +775,7 @@ body {
 }
 .table-wrapper {
   overflow: auto;
+  display: block;
 }
 .table-wrapper table {
   min-width: 460px;
@@ -2688,10 +2689,11 @@ input[type="checkbox"]:checked + .checkbox-label::after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border: 2px solid #f4f4f4;
+  border: 2px solid #1c6bba;
   padding: 8px 10px;
   text-align: center;
-  background-color: #f4f4f4;
+  color: #ffffff;
+  background-color: #1c6bba;
 }
 .car-prices-table thead th strong {
   display: block;
