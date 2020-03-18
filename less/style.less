@@ -1762,7 +1762,6 @@ input[type="checkbox"]:checked + .checkbox-label {
 }
 /*=NEW CAR PAGE=*/
 .new-car-wrapper {
-    position: relative;
     > div[class*="col"] {
         position: static;
     }
@@ -1772,40 +1771,6 @@ input[type="checkbox"]:checked + .checkbox-label {
         display: block;
         max-width: 100%;
         margin: 0 auto;
-    }
-}
-.car-colors {
-    position: absolute;
-    right: 15px;
-    top: 0;
-    .flex();
-    .flex-end();
-}
-.car-color {
-    position: relative;
-    + .car-color {
-        margin-left: 10px;
-    }
-    &-label {
-        border: 1px solid transparent;
-        .box-sizing();
-        width: 30px;
-        height: 30px;
-        .transition();
-        &:hover {
-            border: 4px solid @text-color-light !important;
-        }
-    }
-    input[type="radio"] {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        opacity: 0;
-        &:checked {
-            + .car-color-label {
-                border: 4px solid @text-color-light !important;
-            }
-        }
     }
 }
 .new-car-characteristics {

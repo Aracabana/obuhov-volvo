@@ -259,12 +259,6 @@ $(document).ready(function () {
         });
     }
     
-    //car img
-    $('.js-car-color').click(function() {
-        var carImg = $(this).data('img');
-        $('#js-car-img').attr('src', carImg);
-    });
-    
     //to top btn
     if($('*').is('.js-to-top-btn')) {
         var toTopBtn = $('.js-to-top-btn');

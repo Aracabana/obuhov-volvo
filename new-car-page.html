@@ -141,36 +141,7 @@
                 </div>
                 <div class="col-xl-8 order-2 order-xl-3">
                     <div class="car-img-wrapper">
-                        <form id="car-colors" class="car-colors">
-                            <div class="car-color">
-                                <input id="car-color-1" type="radio" name="car-color" checked>
-                                <label for="car-color-1"
-                                       class="car-color-label js-car-color"
-                                       style="background-color: #ff0000;"
-                                       data-img="img/img-product-page.png"></label>
-                            </div>
-                            <div class="car-color">
-                                <input id="car-color-2" type="radio" name="car-color">
-                                <label for="car-color-2" class="car-color-label js-car-color" style="background-color: #ff5400;"
-                                       data-img="img/img-product-page.png"></label>
-                            </div>
-                            <div class="car-color">
-                                <input id="car-color-3" type="radio" name="car-color">
-                                <label for="car-color-3" class="car-color-label js-car-color" style="background-color: #000000;"
-                                       data-img="img/img-product-page.png"></label>
-                            </div>
-                            <div class="car-color">
-                                <input id="car-color-4" type="radio" name="car-color">
-                                <label for="car-color-4" class="car-color-label js-car-color" style="background-color: #dadada;"
-                                       data-img="img/img-product-page.png"></label>
-                            </div>
-                            <div class="car-color">
-                                <input id="car-color-5" type="radio" name="car-color">
-                                <label for="car-color-5" class="car-color-label js-car-color"
-                                       style="background-color: #ffffff; border-color: #eaeaea;" data-img="img/img-product-page.png"></label>
-                            </div>
-                        </form>
-                        <img id="js-car-img" src="img/img-new-car.jpg" alt="">
+                        <img src="img/img-new-car.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-xl-4 new-car-info order-3 order-xl-2">
@@ -416,8 +387,8 @@
     <section class="section section-pt-none">
         <div class="container">
             <h2 class="section-title">Комплектация и цены</h2>
-            <a href="#" class="table-wrapper" data-href="#car-request-popup" data-toggle="modal"
-               data-target="#car-request-popup">
+            <a href="#" class="table-wrapper" data-href="#car-request-2-popup" data-toggle="modal"
+               data-target="#car-request-2-popup">
                 <table class="car-prices-table">
                     <thead>
                     <tr>
@@ -900,6 +871,31 @@
                 <div class="form-group">
                     <textarea name="car-request-modal-comment" id="car-request-modal-comment" placeholder="Комментарий"
                               class="form-control"></textarea>
+                </div>
+                <p class="form-disclaimer">Нажимая &laquo;Перезвонить&raquo; Вы даете согласие на&nbsp;обработку
+                    персональных данных и&nbsp;соглашаетесь c&nbsp;<a href="text-page.html">пользовательским соглашением и&nbsp;политикой
+                        конфиденциальности</a>.</p>
+                <button class="btn btn-border btn-big" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="car-request-2-popup" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"></button>
+            <h3 class="modal-title section-title">Отправить заявку</h3>
+            <form id="car-request-2-modal-form">
+                <div class="form-group">
+                    <input id="car-request-2-modal-name" name="car-request-2-modal-name" type="text" class="form-control" placeholder="Имя*" required>
+                </div>
+                <div class="form-group">
+                    <input id="car-request-2-modal-tel"
+                           name="car-request-2-modal-tel"
+                           type="tel"
+                           class="form-control"
+                           placeholder="+7 (___) ___ __ __*"
+                           required>
                 </div>
                 <p class="form-disclaimer">Нажимая &laquo;Перезвонить&raquo; Вы даете согласие на&nbsp;обработку
                     персональных данных и&nbsp;соглашаетесь c&nbsp;<a href="text-page.html">пользовательским соглашением и&nbsp;политикой

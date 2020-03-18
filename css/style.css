@@ -2332,9 +2332,6 @@ input[type="checkbox"]:checked + .checkbox-label::after {
   margin-left: 10px;
 }
 /*=NEW CAR PAGE=*/
-.new-car-wrapper {
-  position: relative;
-}
 .new-car-wrapper > div[class*="col"] {
   position: static;
 }
@@ -2342,49 +2339,6 @@ input[type="checkbox"]:checked + .checkbox-label::after {
   display: block;
   max-width: 100%;
   margin: 0 auto;
-}
-.car-colors {
-  position: absolute;
-  right: 15px;
-  top: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-.car-color {
-  position: relative;
-}
-.car-color + .car-color {
-  margin-left: 10px;
-}
-.car-color-label {
-  border: 1px solid transparent;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 30px;
-  height: 30px;
-  -webkit-transition: all ease 0.3s;
-  -moz-transition: all ease 0.3s;
-  -o-transition: all ease 0.3s;
-  transition: all ease 0.3s;
-}
-.car-color-label:hover {
-  border: 4px solid #888887 !important;
-}
-.car-color input[type="radio"] {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-}
-.car-color input[type="radio"]:checked + .car-color-label {
-  border: 4px solid #888887 !important;
 }
 .new-car-characteristics {
   display: -webkit-box;
@@ -3690,23 +3644,8 @@ button.modal-close:focus {
     margin-top: 30px;
   }
   /*=NEW CAR PAGE=*/
-  .new-car-wrapper {
-    position: static;
-  }
   .new-car-wrapper > div[class*="col"] {
     position: relative;
-  }
-  .car-img-wrapper {
-    position: relative;
-    padding-bottom: 40px;
-  }
-  .car-colors {
-    top: auto;
-    bottom: 0;
-    right: 0;
-  }
-  .car-color + .car-color {
-    margin-left: 10px;
   }
   .new-car-characteristics {
     display: block;
