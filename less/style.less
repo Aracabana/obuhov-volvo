@@ -1738,6 +1738,8 @@ input[type="checkbox"]:checked + .checkbox-label {
     }
     li {
         position: relative;
+        padding-left: 50px;
+        background-repeat: no-repeat;
         strong {
             display: block;
             margin-bottom: 5px;
@@ -1750,6 +1752,30 @@ input[type="checkbox"]:checked + .checkbox-label {
     }
     li + li {
         margin-top: 15px;
+    }
+    &-dimensions {
+        background-position: 1px 0;
+        background-image: url("../img/ico-dimensions.png");
+    }
+    &-transmission {
+        background-position: 1px 0;
+        background-image: url("../img/ico-transmission.png");
+    }
+    &-engine{
+        background-position: 0 0;
+        background-image: url("../img/ico-engine.png");
+    }
+    &-warranty {
+        background-position: 1px 0;
+        background-image: url("../img/ico-warranty.png");
+    }
+    &-petrol {
+        background-position: 3px 0;
+        background-image: url("../img/ico-petrol.png");
+    }
+    &-wheels {
+        background-position: 1px 0;
+        background-image: url("../img/ico-wheels.png");
     }
 }
 .car-links {
@@ -1776,20 +1802,24 @@ input[type="checkbox"]:checked + .checkbox-label {
 .new-car-characteristics {
     .flex();
     .space-between();
-    margin-right: -30px;
-    padding: 20px 25px;
+    margin-right: -45px;
+    padding: 20px 15px;
     background-color: @bg-color-middle;
     ul {
         .box-sizing();
-        width: 50%;
         &:first-child {
             border-right: 1px solid #ffffff;
-            padding-right: 25px;
+            padding-right: 15px;
+            width: 45%;
         }
         &:last-child {
-            padding-left: 25px;
+            padding-left: 15px;
+            width: 55%;
         }
         li {
+            position: relative;
+            padding-left: 40px;
+            background-repeat: no-repeat;
             + li {
                 margin-top: 15px;
             }
@@ -1803,6 +1833,30 @@ input[type="checkbox"]:checked + .checkbox-label {
                 line-height: 1.375;
             }
         }
+    }
+    &-dimensions {
+        background-position: 1px 0;
+        background-image: url("../img/ico-dimensions.png");
+    }
+    &-transmission {
+        background-position: 1px 0;
+        background-image: url("../img/ico-transmission.png");
+    }
+    &-engine{
+        background-position: 0 0;
+        background-image: url("../img/ico-engine.png");
+    }
+    &-warranty {
+        background-position: 1px 0;
+        background-image: url("../img/ico-warranty.png");
+    }
+    &-petrol {
+        background-position: 3px 0;
+        background-image: url("../img/ico-petrol.png");
+    }
+    &-wheels {
+        background-position: 1px 0;
+        background-image: url("../img/ico-wheels.png");
     }
 }
 .new-car-characteristics-2 {

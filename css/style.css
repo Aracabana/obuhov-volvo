@@ -2304,6 +2304,8 @@ input[type="checkbox"]:checked + .checkbox-label::after {
 }
 .car-characteristics li {
   position: relative;
+  padding-left: 50px;
+  background-repeat: no-repeat;
 }
 .car-characteristics li strong {
   display: block;
@@ -2316,6 +2318,30 @@ input[type="checkbox"]:checked + .checkbox-label::after {
 }
 .car-characteristics li + li {
   margin-top: 15px;
+}
+.car-characteristics-dimensions {
+  background-position: 1px 0;
+  background-image: url("../img/ico-dimensions.png");
+}
+.car-characteristics-transmission {
+  background-position: 1px 0;
+  background-image: url("../img/ico-transmission.png");
+}
+.car-characteristics-engine {
+  background-position: 0 0;
+  background-image: url("../img/ico-engine.png");
+}
+.car-characteristics-warranty {
+  background-position: 1px 0;
+  background-image: url("../img/ico-warranty.png");
+}
+.car-characteristics-petrol {
+  background-position: 3px 0;
+  background-image: url("../img/ico-petrol.png");
+}
+.car-characteristics-wheels {
+  background-position: 1px 0;
+  background-image: url("../img/ico-wheels.png");
 }
 .car-links {
   display: -webkit-box;
@@ -2349,22 +2375,28 @@ input[type="checkbox"]:checked + .checkbox-label::after {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-right: -30px;
-  padding: 20px 25px;
+  margin-right: -45px;
+  padding: 20px 15px;
   background-color: #f4f4f4;
 }
 .new-car-characteristics ul {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 50%;
 }
 .new-car-characteristics ul:first-child {
   border-right: 1px solid #ffffff;
-  padding-right: 25px;
+  padding-right: 15px;
+  width: 45%;
 }
 .new-car-characteristics ul:last-child {
-  padding-left: 25px;
+  padding-left: 15px;
+  width: 55%;
+}
+.new-car-characteristics ul li {
+  position: relative;
+  padding-left: 40px;
+  background-repeat: no-repeat;
 }
 .new-car-characteristics ul li + li {
   margin-top: 15px;
@@ -2377,6 +2409,30 @@ input[type="checkbox"]:checked + .checkbox-label::after {
 .new-car-characteristics ul li span {
   display: block;
   line-height: 1.375;
+}
+.new-car-characteristics-dimensions {
+  background-position: 1px 0;
+  background-image: url("../img/ico-dimensions.png");
+}
+.new-car-characteristics-transmission {
+  background-position: 1px 0;
+  background-image: url("../img/ico-transmission.png");
+}
+.new-car-characteristics-engine {
+  background-position: 0 0;
+  background-image: url("../img/ico-engine.png");
+}
+.new-car-characteristics-warranty {
+  background-position: 1px 0;
+  background-image: url("../img/ico-warranty.png");
+}
+.new-car-characteristics-petrol {
+  background-position: 3px 0;
+  background-image: url("../img/ico-petrol.png");
+}
+.new-car-characteristics-wheels {
+  background-position: 1px 0;
+  background-image: url("../img/ico-wheels.png");
 }
 .new-car-characteristics-2 {
   display: -webkit-box;
@@ -3031,6 +3087,10 @@ button.modal-close:focus {
     margin-left: 0;
     margin-top: 15px;
   }
+  /*=CAR PAGE=*/
+  .car-characteristics li {
+    padding-left: 40px;
+  }
   /*=NEW CAR PAGE=*/
   .car-img-wrapper img {
     margin: 0 auto;
@@ -3650,16 +3710,15 @@ button.modal-close:focus {
   .new-car-characteristics {
     display: block;
   }
-  .new-car-characteristics ul {
-    width: 100%;
-  }
   .new-car-characteristics ul:first-child {
     margin-bottom: 15px;
     border-right: none;
     padding-right: 0;
+    width: 100%;
   }
   .new-car-characteristics ul:last-child {
     padding-left: 0;
+    width: 100%;
   }
   .car-gallery-filter::after {
     width: 60px;
