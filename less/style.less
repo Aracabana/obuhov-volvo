@@ -1870,7 +1870,7 @@ input[type="checkbox"]:checked + .checkbox-label {
         width: 50%;
         div {
             .box-sizing();
-            padding: 20px;
+            padding: 15px 20px 5px 20px;
             height: 100%;
             background-color: @bg-color-middle;
             table {
@@ -1880,17 +1880,18 @@ input[type="checkbox"]:checked + .checkbox-label {
                 .box-sizing();
                 vertical-align: top;
                 width: 50%;
-                padding-bottom: 10px;
+                padding-top: 5px;
+                padding-bottom: 15px;
             }
             td:first-child {
                 border-right: 1px solid #ffffff;
                 padding-right: 25px;
+                padding-left: 45px;
+                background-repeat: no-repeat;
+                background-position: 3px 3px;
             }
             td:last-child {
                 padding-left: 25px;
-            }
-            tr:last-child td {
-                padding-bottom: 0;
             }
             strong {
                 display: block;
@@ -1900,6 +1901,13 @@ input[type="checkbox"]:checked + .checkbox-label {
             span {
                 display: block;
                 line-height: 1.375;
+            }
+        }
+        &:first-child {
+            tr:nth-child(3) {
+                td:first-child {
+                    background-position: 0 3px;
+                }
             }
         }
     }

@@ -2457,7 +2457,7 @@ input[type="checkbox"]:checked + .checkbox-label::after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 15px 20px 5px 20px;
   height: 100%;
   background-color: #f4f4f4;
 }
@@ -2470,17 +2470,18 @@ input[type="checkbox"]:checked + .checkbox-label::after {
   box-sizing: border-box;
   vertical-align: top;
   width: 50%;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 15px;
 }
 .new-car-characteristics-2-in div td:first-child {
   border-right: 1px solid #ffffff;
   padding-right: 25px;
+  padding-left: 45px;
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
 }
 .new-car-characteristics-2-in div td:last-child {
   padding-left: 25px;
-}
-.new-car-characteristics-2-in div tr:last-child td {
-  padding-bottom: 0;
 }
 .new-car-characteristics-2-in div strong {
   display: block;
@@ -2490,6 +2491,9 @@ input[type="checkbox"]:checked + .checkbox-label::after {
 .new-car-characteristics-2-in div span {
   display: block;
   line-height: 1.375;
+}
+.new-car-characteristics-2-in:first-child tr:nth-child(3) td:first-child {
+  background-position: 0 3px;
 }
 .new-car-links {
   display: -webkit-box;
